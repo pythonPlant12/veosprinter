@@ -1,0 +1,74 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    volumes:
+      - static_volume:/app/staticfiles
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+
+  postgres:
+    image: postgres:14-alpine
+    environment:
+      - POSTGRES_DB=${DB_NAME:-dbname}
+      - POSTGRES_USER=${DB_USER:-user}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${DB_USER:-user} -d ${DB_NAME:-dbname}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app-network
+
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ../nginx:/etc/nginx/conf.d:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+      - ./certbot/www:/var/www/certbot
+      - static_volume:/var/www/static
+      - media_volume:/var/www/media
+#    user: "1000:1000"
+    command: /bin/sh -c "chown -R 1000:1000 /var/www/static /var/www/media && exec nginx -g 'daemon off;'"
+    depends_on:
+      - frontend
+      - backend
+
+    networks:
+      - app-network
+
+volumes:
+    postgres_data:
+    static_volume:
+    media_volume:
+
+networks:
+    app-network:
+        name: app_network
+        driver: bridge
