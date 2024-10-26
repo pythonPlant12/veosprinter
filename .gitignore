@@ -1,2 +1,3 @@
-*/venv_backend
-*/node_modules
+**/venv_backend
+**/node_modules
+**/__pycache__
