@@ -11,7 +11,7 @@ function toggleNavBar() {
 
 </style>
 <template>
-    <div class="relative px-4 py-4 flex justify-between items-center bg-white">
+    <div class="relative px-4 py-4 flex justify-between items-center bg-white z-50">
     <a class="text-3xl font-bold leading-none" href="#">
       <svg class="h-10" alt="logo" viewBox="0 0 10240 10240">
         <path xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ function toggleNavBar() {
       </svg>
     </a>
     <div>
-      <button ref="navbarBurgerButton" @click="toggleNavBar()" class="navbar-burger flex items-center text-blue-600 p-3">
+      <button ref="navbarBurgerButton" @click="toggleNavBar()" class="navbar-burger flex items-center text-red-800 p-3">
         <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Mobile menu</title>
           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -53,43 +53,38 @@ function toggleNavBar() {
       <div>
         <ul>
           <li class="mb-1">
-            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-red-800 rounded"
                href="#"
-            >Home</a>
+            >{{ $t('home') }}</a>
           </li>
           <li class="mb-1">
-            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-red-800 rounded"
                href="#"
-            >About Us</a>
+            >{{ $t('services') }}</a>
           </li>
           <li class="mb-1">
-            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-red-800 rounded"
                href="#"
-            >Services</a>
+            >{{ $t('pricing') }}</a>
           </li>
           <li class="mb-1">
-            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-gray-100 hover:text-red-800 rounded"
                href="#"
-            >Pricing</a>
-          </li>
-          <li class="mb-1">
-            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-               href="#"
-            >Contact</a>
+            >{{ $t('aboutUs') }}</a>
           </li>
         </ul>
       </div>
       <div class="mt-auto">
         <div class="pt-6">
-          <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+          <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl"
              href="#"
-          >Sign in</a>
-          <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+          >{{ $t('contact') }}</a>
+          <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-red-800 hover:bg-red-950  rounded-xl"
              href="#"
-          >Sign Up</a>
+          >{{ $t('order') }}</a>
         </div>
         <p class="my-4 text-xs text-center text-gray-400">
-          <span>Copyright © 2021</span>
+          <span>Veosprinter Copyright © 2024</span>
         </p>
       </div>
     </nav>

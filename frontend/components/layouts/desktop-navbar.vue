@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import LanguageButton from "~/components/layouts/language-button.vue";
 </script>
 <style>
 
 </style>
 <template>
   <!--Desktop -->
-  <nav class="relative px-3 py-4 flex justify-between items-center bg-white">
+  <nav class="relative py-4 flex justify-between items-center bg-white md:px-16 z-50">
     <a class="text-2xl font-bold leading-none" href="#">
       <svg class="h-9" alt="logo" viewBox="0 0 10240 10240">
         <path
@@ -14,7 +15,7 @@
       </svg>
     </a>
     <ul class="absolute left-1/2 transform -translate-x-1/2 flex mx-auto flex items-center w-auto space-x-6">
-      <li><a class="text-sm text-gray-399 hover:text-gray-500" href="#">{{ $t('welcome') }}</a></li>
+      <li><a class="text-sm text-gray-399 hover:text-gray-500" href="#">{{ $t('home') }}</a></li>
       <li class="text-gray-299">
         <svg
             fill="none"
@@ -30,7 +31,7 @@
           />
         </svg>
       </li>
-      <li><a class="text-sm text-blue-599 font-bold" href="#">About Us</a></li>
+      <li><a class="text-sm font-bold" href="#">{{ $t('services') }}</a></li>
       <li class="text-gray-299">
         <svg
             fill="none"
@@ -46,7 +47,7 @@
           />
         </svg>
       </li>
-      <li><a class="text-sm text-gray-399 hover:text-gray-500" href="#">Services</a></li>
+      <li><a class="text-sm text-gray-399 hover:text-gray-500" href="#">{{ $t('pricing') }}</a></li>
       <li class="text-gray-299">
         <svg
             fill="none"
@@ -62,7 +63,7 @@
           />
         </svg>
       </li>
-      <li><a class="text-sm text-gray-399 hover:text-gray-500" href="#">Pricing</a></li>
+      <li><a class="text-sm text-gray-399 hover:text-gray-500" href="#">{{ $t('aboutUs') }}</a></li>
       <li class="text-gray-299">
         <svg
             fill="none"
@@ -70,20 +71,21 @@
             class="w-3 h-4 current-fill"
             viewBox="1 0 24 24"
         >
-          <path stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="3"
-                d="M13 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+          <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M13 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
           />
         </svg>
       </li>
-      <li><a class="text-sm text-gray-399 hover:text-gray-500" href="#">Contact</a></li>
+      <li><language-button /></li>
     </ul>
-    <a class="inline-block ml-auto mr-2 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
+    <a class="inline-block ml-auto mr-2 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
        href="#"
-    >Sign In</a>
-    <a class="inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+    >{{ $t('contact') }}</a>
+    <a class="inline-block py-2 px-6 bg-red-800 hover:bg-red-950 text-sm text-white font-bold rounded-xl transition duration-200"
        href="#"
-    >Sign up</a>
+    >{{ $t('order') }}</a>
   </nav>
 </template>

@@ -10,10 +10,8 @@ watch(viewport.breakpoint, () => {
 function setLayout() {
   if (viewport.isLessThan(Layout.DESKTOP)) {
     activeLayout.value = Layout.MOBILE
-    console.log("setting up mobile layout")
   } else {
     activeLayout.value = Layout.DESKTOP
-    console.log("setting up desktop layout")
   }
 }
 </script>
