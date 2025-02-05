@@ -41,10 +41,10 @@ function toggleNavBar() {
 		<div
 			@click="toggleNavBar"
 			ref="navbarBackdrop"
-			class="fixed inset-0 bg-gray-800 opacity-25"
+			class="fixed inset-0 bg-gray-800 opacity-50"
 		></div>
 		<nav
-			class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-background border-r overflow-y-auto"
+			class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-background border-r dark:border-gray-950 overflow-y-auto"
 		>
 			<div class="flex items-center mb-8">
 				<a class="mr-auto text-3xl font-bold leading-none" href="#">
@@ -114,7 +114,7 @@ function toggleNavBar() {
 					<a
 						class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-primary dark:hover:bg-red-950 hover:bg-red-700 rounded-xl"
 						href="#"
-						>{{ $t('order') }}</a
+						>{{ $t('orderButton') }}</a
 					>
 				</div>
 				<p class="my-4 text-xs text-center text-gray-400">

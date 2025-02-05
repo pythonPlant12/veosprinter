@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import locatePath from 'locate-path'
+
 import LanguageButton from '~/components/layouts/language-button.vue'
 </script>
 <style></style>
@@ -18,9 +20,11 @@ import LanguageButton from '~/components/layouts/language-button.vue'
 			class="absolute left-1/2 transform -translate-x-1/2 mx-auto flex items-center w-auto space-x-6"
 		>
 			<li>
-				<a class="text-sm text-gray-399 hover:text-gray-500" href="#">{{
-					$t('home')
-				}}</a>
+				<NuxtLink
+					class="text-sm text-gray-399 hover:text-gray-500"
+					:to="localePath('/')"
+					>{{ $t('home') }}</NuxtLink
+				>
 			</li>
 			<li class="text-gray-299">
 				<svg
@@ -104,10 +108,10 @@ import LanguageButton from '~/components/layouts/language-button.vue'
 			href="#"
 			>{{ $t('contact') }}</a
 		>
-		<a
+		<NuxtLink
 			class="inline-block py-2 px-6 bg-red-800 hover:bg-red-950 text-sm text-white font-bold rounded-xl transition duration-200"
-			href="#"
-			>{{ $t('order') }}</a
+			:to="localePath('/order')"
+			>{{ $t('orderButton') }}</NuxtLink
 		>
 	</nav>
 </template>

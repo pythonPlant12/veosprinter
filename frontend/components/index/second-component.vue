@@ -125,7 +125,7 @@ const services: ServiceCard[] = [
 	},
 	{
 		id: 6,
-		title: 'Ehituspraht (Penoplast, Villad)',
+		title: 'Ehituspraht',
 		subtitle: 'Isolatsioonimaterjalide äravedu',
 		price: '€300',
 		descriptions: [
@@ -169,7 +169,7 @@ const services: ServiceCard[] = [
 					:subtitle="service.subtitle"
 					:price="service.price"
 					:descriptions="service.descriptions"
-					class="opacity-0 hover:shadow-2xl duration-500"
+					class="opacity-0 hover:shadow-2xl duration-500 drop-shadow-xl dark:drop-shadow-xs dark:shadow-gray-800"
 					:style="`animation-delay: ${index * 150}ms`"
 				/>
 			</div>

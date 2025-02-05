@@ -43,7 +43,7 @@
 		</div>
 		<div class="max-w-1400px flex justify-center">
 			<button
-				class="bg-primary text-white px-20 py-3 rounded-xl hover:bg-red-800 transition duration-200 fade-in-delay-5"
+				class="bg-primary text-white px-20 py-3 rounded-xl hover:bg-red-800 transition duration-200 fade-in-delay-5 shadow-lg shadow-red-900"
 			>
 				{{ $t('indexMainButton') }}
 			</button>
