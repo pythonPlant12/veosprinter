@@ -349,7 +349,8 @@ onMounted(() => {
 	const script = document.createElement('script')
 	script.async = true
 	script.onload = initPlace
-	script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyC8P6l-tshtz5aBiR1f3XZDFONv28KZglw&libraries=places`
+	const apiKey = useRuntimeConfig().public.googleMapsApiKey
+	script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`
 	document.head.appendChild(script)
 })
 onUnmounted(() => {

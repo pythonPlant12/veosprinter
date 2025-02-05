@@ -30,6 +30,11 @@ export default defineNuxtConfig({
 		vueI18n: './i18n.config.ts',
 		fallbackLocale: 'ee'
 	},
+	runtimeConfig: {
+		public: {
+			googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY
+		}
+	},
 	shadcn: {
 		/**
 		 * Prefix for all the imported component
