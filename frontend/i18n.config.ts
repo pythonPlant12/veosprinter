@@ -52,6 +52,25 @@ export default defineI18nConfig(() => ({
 								'Lõppkuupäev peab olema pärast alguskuupäeva',
 							endTimeAfterStartTime: 'Lõppaeg peab olema pärast algusaega'
 						}
+					},
+					contactStep: {
+						name: 'Eesnimi',
+						surname: 'Perekonnanimi',
+						email: 'E-post',
+						phone: 'Telefon',
+						additionalInfo: 'Lisainfo',
+						inputs: {
+							email: 'email@mail.com',
+							phone: '+372 123 4567'
+						},
+						errors: {
+							name: 'Eesnimi on kohustuslik',
+							surname: 'Perekonnanimi on kohustuslik',
+							email: 'E-post on kohustuslik',
+							phone: 'Telefon on kohustuslik',
+							validEmail: 'Sisestage korrektne e-posti aadress',
+							validPhone: 'Sisestage korrektne telefoninumber'
+						}
 					}
 				},
 				summary: {
@@ -122,6 +141,25 @@ export default defineI18nConfig(() => ({
 							endTimeAfterStartTime:
 								'Время окончания должно быть позже времени начала'
 						}
+					},
+					contactStep: {
+						name: 'Имя',
+						surname: 'Фамилия',
+						email: 'Электронная почта',
+						phone: 'Телефон',
+						additionalInfo: 'Дополнительная информация',
+						inputs: {
+							email: 'email@mail.com',
+							phone: '+372 123 4567'
+						},
+						errors: {
+							name: 'Имя обязательно для заполнения',
+							surname: 'Фамилия обязательна для заполнения',
+							email: 'Электронная почта обязательна для заполнения',
+							phone: 'Телефон обязателен для заполнения',
+							validEmail: 'Введите корректный адрес электронной почты',
+							validPhone: 'Введите корректный номер телефона'
+						}
 					}
 				},
 				summary: {
@@ -188,6 +226,25 @@ export default defineI18nConfig(() => ({
 							selectTimeTo: 'End time is required',
 							endDateAfterStartDate: 'End date must be after start date',
 							endTimeAfterStartTime: 'End time must be after start time'
+						}
+					},
+					contactStep: {
+						name: 'Name',
+						surname: 'Surname',
+						email: 'Email',
+						phone: 'Phone',
+						additionalInfo: 'Additional Information',
+						inputs: {
+							email: 'email@mail.com',
+							phone: '+372 123 4567'
+						},
+						errors: {
+							name: 'Name field is required',
+							surname: 'Surname field is required',
+							email: 'Email field is required',
+							phone: 'Phone field is required',
+							validEmail: 'Enter a valid email address',
+							validPhone: 'Enter a valid phone number'
 						}
 					}
 				},

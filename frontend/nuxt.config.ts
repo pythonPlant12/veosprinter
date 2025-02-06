@@ -14,6 +14,10 @@ export default defineNuxtConfig({
 		'@nuxtjs/color-mode'
 	],
 	app: {
+		pageTransition: {
+			name: 'page',
+			mode: 'out-in'
+		},
 		head: {
 			link: [
 				{
