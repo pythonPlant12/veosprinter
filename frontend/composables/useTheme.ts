@@ -1,51 +1,54 @@
 export const useTheme = () => {
-  const colorMode = useColorMode()
+  const colorMode = useColorMode();
 
   const checkSystemTheme = (): boolean => {
-    if (process.client) {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
+    if (import.meta.client) {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
     }
-    return false
-  }
+    return false;
+  };
 
   const updateTheme = (preference: string) => {
-    if (process.client) {
-      if (preference === 'dark' || (preference === 'system' && checkSystemTheme())) {
-        document.documentElement.classList.add('dark')
+    if (import.meta.client) {
+      if (
+        preference === "dark" ||
+        (preference === "system" && checkSystemTheme())
+      ) {
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.remove('dark')
+        document.documentElement.classList.remove("dark");
       }
     }
-  }
+  };
 
   // Watch for color mode preference changes
-  watch(() => colorMode.preference, updateTheme, { immediate: true })
+  watch(() => colorMode.preference, updateTheme, { immediate: true });
 
   // Watch for system theme changes
   onMounted(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
     const handleChange = (e: MediaQueryListEvent) => {
-      if (colorMode.preference === 'system') {
+      if (colorMode.preference === "system") {
         if (e.matches) {
-          document.documentElement.classList.add('dark')
+          document.documentElement.classList.add("dark");
         } else {
-          document.documentElement.classList.remove('dark')
+          document.documentElement.classList.remove("dark");
         }
       }
-    }
+    };
 
-    mediaQuery.addEventListener('change', handleChange)
+    mediaQuery.addEventListener("change", handleChange);
 
     // Cleanup
     onUnmounted(() => {
-      mediaQuery.removeEventListener('change', handleChange)
-    })
-  })
+      mediaQuery.removeEventListener("change", handleChange);
+    });
+  });
 
   return {
     updateTheme,
     checkSystemTheme,
-    colorMode
-  }
-}
+    colorMode,
+  };
+};

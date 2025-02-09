@@ -1,267 +1,299 @@
 export default defineI18nConfig(() => ({
-	legacy: false,
-	locale: 'ee',
-	messages: {
-		ee: {
-			welcome: 'Tervest',
-			indexMainPhrase: 'Nutikas logistika - teie õige valik',
-			indexMainText:
-				'Veosprinter on spetsialiseerunud kvaliteetse ehitustehnika rendile, pakkudes usaldusväärseid sõidukeid ja seadmeid nii era- kui ka äriprojektidele. Meie lai masinapark teenindab töövõtjaid ja ehitajaid, pakkudes paindlikke renditingimusi ning tagades projektide edu kvaliteetse tehnika ja suurepärase teeninduse kaudu.',
-			indexMainButton: 'Telli kohe',
-			home: 'Avaleht',
-			services: 'Teenused',
-			pricing: 'Hinnakiri',
-			aboutUs: 'Meist',
-			contact: 'Kontakt',
-			orderButton: 'Telli',
-			index: {
-				secondComponent: {
-					title: 'Kuumad Pakkumised'
-				}
-			},
-			order: {
-				request: 'Tellimus',
-				contact: 'Kontaktandmed',
-				confirm: 'Kinnita tellimus',
-				payment: 'Maksmine',
-				checkout: 'Kontrolli tellimust',
-				form: {
-					estonianAddressLabel: 'Eesti aadress',
-					estonianAddressInput: 'Sisesta oma aadress',
-					estonianAddressDescription: 'Vali aadress kirjutades',
-					selectContainer: 'Vali Konteiner',
-					container: 'Konteiner',
-					typeOfWasteLabel: 'Jäätmete tüüp',
-					typeOfWasteInput: 'Vali jäätmete tüüp',
-					chooseDateAndTimeFrom: 'Vali alguskuupäev ja kellaaeg',
-					chooseDateAndTimeTo: 'Vali lõppkuupäev ja kellaaeg',
-					date: 'Kuupäev',
-					time: 'Kellaaeg',
-					continue: 'Jätka',
-					makeYourOrder: 'Tee oma tellimus',
-					orderStep: {
-						errors: {
-							addressFromSuggestions: 'Aadress soovituste seast on kohustuslik',
-							selectContainer: 'Konteiner on kohustuslik',
-							selectWasteType: 'Jäätme tüüp on kohustuslik',
-							selectDateFrom: 'Alguskuupäev on kohustuslik',
-							selectTimeFrom: 'Algusaeg on kohustuslik',
-							selectDateTo: 'Lõppkuupäev on kohustuslik',
-							selectTimeTo: 'Lõppaeg on kohustuslik',
-							endDateAfterStartDate:
-								'Lõppkuupäev peab olema pärast alguskuupäeva',
-							endTimeAfterStartTime: 'Lõppaeg peab olema pärast algusaega'
-						}
-					},
-					contactStep: {
-						name: 'Eesnimi',
-						surname: 'Perekonnanimi',
-						email: 'E-post',
-						phone: 'Telefon',
-						additionalInfo: 'Lisainfo',
-						inputs: {
-							email: 'email@mail.com',
-							phone: '+372 123 4567'
-						},
-						errors: {
-							name: 'Eesnimi on kohustuslik',
-							surname: 'Perekonnanimi on kohustuslik',
-							email: 'E-post on kohustuslik',
-							phone: 'Telefon on kohustuslik',
-							validEmail: 'Sisestage korrektne e-posti aadress',
-							validPhone: 'Sisestage korrektne telefoninumber'
-						}
-					}
-				},
-				summary: {
-					title: 'Tellimuse kokkuvõte',
-					container: 'Konteiner',
-					rentalPeriod: 'Rendiperiood',
-					rentalPrice: 'Rendihind',
-					mileage: 'Läbisõit',
-					taxes: 'Käibemaks',
-					total: 'Kokku',
-					finalPrice: 'Lõplik hind',
-					additionalWeight: 'Lisakaal',
-					dateFrom: 'Alates',
-					dateTo: 'Kuni'
-				}
-			}
-		},
-		ru: {
-			welcome: 'Здравствуйте',
-			indexMainPhrase: 'Интеллектуальные логистические решения для вас',
-			indexMainText:
-				'Veosprinter специализируется на аренде премиальной строительной техники, предоставляя надёжные транспортные средства и оборудование для жилищных и коммерческих проектов. Наш обширный автопарк обслуживает подрядчиков и строителей, предлагая гибкие условия аренды и гарантируя успех проектов благодаря качественной технике и превосходному сервису.',
-			indexMainButton: 'Заказать',
-			home: 'Главная',
-			services: 'Услуги',
-			pricing: 'Цены',
-			aboutUs: 'О нас',
-			contact: 'Контакт',
-			orderButton: 'Заказать',
-			index: {
-				secondComponent: {
-					title: 'Горячие предложения'
-				}
-			},
-			order: {
-				request: 'Заказ',
-				contact: 'Данные',
-				confirm: 'Подтверждение',
-				payment: 'Оплата',
-				checkout: 'Проверьте заказ',
-				form: {
-					estonianAddressLabel: 'Эстонский адрес',
-					estonianAddressInput: 'Введите ваш адрес',
-					estonianAddressDescription:
-						'Выберите ваш адрес из списка при написании',
-					selectContainer: 'Выберите контейнер',
-					container: 'Контейнер',
-					typeOfWasteLabel: 'Тип отходов',
-					typeOfWasteInput: 'Выберите тип отходов',
-					chooseDateAndTimeFrom: 'Выберите дату и время начала',
-					chooseDateAndTimeTo: 'Выберите дату и время окончания',
-					date: 'Дата',
-					time: 'Время',
-					continue: 'Продолжить',
-					makeYourOrder: 'Сделайте ваш заказ',
-					orderStep: {
-						errors: {
-							addressFromSuggestions:
-								'Адрес из предложений обязателен для заполнения',
-							selectContainer: 'Контейнер обязателен для заполнения',
-							selectWasteType: 'Типы отходов обязателен для заполнения',
-							selectDateFrom: 'Дата начала обязательно для заполнения',
-							selectTimeFrom: 'Время начала обязательно для заполнения',
-							selectDateTo: 'Дата окончания обязательно для заполнения',
-							selectTimeTo: 'Время окончания обязательно для заполнения',
-							endDateAfterStartDate:
-								'Дата окончания должна быть позже даты начала',
-							endTimeAfterStartTime:
-								'Время окончания должно быть позже времени начала'
-						}
-					},
-					contactStep: {
-						name: 'Имя',
-						surname: 'Фамилия',
-						email: 'Электронная почта',
-						phone: 'Телефон',
-						additionalInfo: 'Дополнительная информация',
-						inputs: {
-							email: 'email@mail.com',
-							phone: '+372 123 4567'
-						},
-						errors: {
-							name: 'Имя обязательно для заполнения',
-							surname: 'Фамилия обязательна для заполнения',
-							email: 'Электронная почта обязательна для заполнения',
-							phone: 'Телефон обязателен для заполнения',
-							validEmail: 'Введите корректный адрес электронной почты',
-							validPhone: 'Введите корректный номер телефона'
-						}
-					}
-				},
-				summary: {
-					title: 'Сводка заказа',
-					container: 'Контейнер',
-					rentalPeriod: 'Срок аренды',
-					rentalPrice: 'Цена аренды',
-					taxes: 'НДС',
-					mileage: 'Киломентраж',
-					total: 'Итого',
-					finalPrice: 'Итоговая цена',
-					additionalWeight: 'Дополнительный вес',
-					dateFrom: 'От',
-					dateTo: 'До'
-				}
-			}
-		},
-		en: {
-			welcome: 'Welcome',
-			indexMainPhrase: 'Your choice for intelligent logistics',
-			indexMainText:
-				'Veosprinter specializes in premium construction equipment rentals, providing reliable vehicles and machinery for residential and commercial projects. Our extensive fleet serves contractors and builders with flexible rental solutions, ensuring project success through quality equipment and superior service.',
-			indexMainButton: 'Order',
-			home: 'Home',
-			services: 'Services',
-			pricing: 'Pricing',
-			aboutUs: 'About Us',
-			contact: 'Contact',
-			orderButton: 'Order',
-			index: {
-				secondComponent: {
-					title: 'Special Offers'
-				}
-			},
-			order: {
-				request: 'Order',
-				contact: 'Contact',
-				confirm: 'Confirm Order',
-				payment: 'Payment',
-				checkout: 'Checkout',
-				form: {
-					estonianAddressLabel: 'Estonian Address',
-					estonianAddressInput: 'Enter your address',
-					estonianAddressDescription:
-						'Select your address from the list when typing',
-					selectContainer: 'Select Container',
-					chooseDateAndTimeFrom: 'Choose start date and time',
-					chooseDateAndTimeTo: 'Choose end date and time',
-					date: 'Date',
-					time: 'Time',
-					container: 'Container',
-					typeOfWasteLabel: 'Type of Waste',
-					typeOfWasteInput: 'Select type of waste',
-					continue: 'Continue',
-					makeYourOrder: 'Make your order',
-					orderStep: {
-						errors: {
-							addressFromSuggestions: 'Address from suggestions is required',
-							selectContainer: 'Container field is required',
-							selectWasteType: 'Waste type field is required',
-							selectDateFrom: 'Start date is required',
-							selectTimeFrom: 'Start time is required',
-							selectDateTo: 'End date is required',
-							selectTimeTo: 'End time is required',
-							endDateAfterStartDate: 'End date must be after start date',
-							endTimeAfterStartTime: 'End time must be after start time'
-						}
-					},
-					contactStep: {
-						name: 'Name',
-						surname: 'Surname',
-						email: 'Email',
-						phone: 'Phone',
-						additionalInfo: 'Additional Information',
-						inputs: {
-							email: 'email@mail.com',
-							phone: '+372 123 4567'
-						},
-						errors: {
-							name: 'Name field is required',
-							surname: 'Surname field is required',
-							email: 'Email field is required',
-							phone: 'Phone field is required',
-							validEmail: 'Enter a valid email address',
-							validPhone: 'Enter a valid phone number'
-						}
-					}
-				},
-				summary: {
-					title: 'Order Summary',
-					container: 'Container',
-					rentalPeriod: 'Rental Period',
-					rentalPrice: 'Rental Price',
-					mileage: 'Mileage',
-					taxes: 'Taxes',
-					total: 'Total',
-					finalPrice: 'Final Price',
-					additionalWeight: 'Additional Weight',
-					dateFrom: 'From',
-					dateTo: 'To'
-				}
-			}
-		}
-	}
-}))
+  legacy: false,
+  locale: "ee",
+  messages: {
+    ee: {
+      welcome: "Tervest",
+      indexMainPhrase: "Nutikas logistika - teie õige valik",
+      indexMainText:
+        "Veosprinter on spetsialiseerunud kvaliteetse ehitustehnika rendile, pakkudes usaldusväärseid sõidukeid ja seadmeid nii era- kui ka äriprojektidele. Meie lai masinapark teenindab töövõtjaid ja ehitajaid, pakkudes paindlikke renditingimusi ning tagades projektide edu kvaliteetse tehnika ja suurepärase teeninduse kaudu.",
+      indexMainButton: "Telli kohe",
+      home: "Avaleht",
+      services: "Teenused",
+      pricing: "Hinnakiri",
+      aboutUs: "Meist",
+      contact: "Kontakt",
+      orderButton: "Telli",
+      index: {
+        secondComponent: {
+          title: "Kuumad Pakkumised",
+        },
+      },
+      order: {
+        request: "Tellimus",
+        contact: "Kontaktandmed",
+        confirm: "Kinnita tellimus",
+        payment: "Maksmine",
+        checkout: "Kontrolli tellimust",
+        form: {
+          address: "Aadress",
+          estonianAddressLabel: "Eesti aadress",
+          estonianAddressInput: "Sisesta oma aadress",
+          estonianAddressDescription: "Vali aadress kirjutades",
+          selectContainer: "Vali Konteiner",
+          selectNecessaryInfo:
+            "Täida kohustuslikud väljad tellimuse kokkuvõtteks",
+          chooseVolume: "Vali maht (m³)",
+          chooseWeight: "Vali kaal (Tonni)",
+          container: "Konteiner",
+          typeOfWasteLabel: "Jäätmete tüüp",
+          typeOfWasteInput: "Vali jäätmete tüüp",
+          chooseDateAndTimeFrom: "Vali alguskuupäev ja kellaaeg",
+          chooseDateAndTimeTo: "Vali lõppkuupäev ja kellaaeg",
+          date: "Kuupäev",
+          time: "Kellaaeg",
+          continue: "Jätka",
+          makeYourOrder: "Tee oma tellimus",
+          orderStep: {
+            errors: {
+              addressFromSuggestions: "Aadress soovituste seast on kohustuslik",
+              selectContainer: "Konteiner on kohustuslik",
+              selectWasteType: "Jäätme tüüp on kohustuslik",
+              selectDateFrom: "Alguskuupäev on kohustuslik",
+              selectTimeFrom: "Algusaeg on kohustuslik",
+              selectDateTo: "Lõppkuupäev on kohustuslik",
+              selectTimeTo: "Lõppaeg on kohustuslik",
+              endDateAfterStartDate:
+                "Lõppkuupäev peab olema pärast alguskuupäeva",
+              endTimeAfterStartTime: "Lõppaeg peab olema pärast algusaega",
+            },
+          },
+          contactStep: {
+            name: "Eesnimi",
+            surname: "Perekonnanimi",
+            email: "E-post",
+            phone: "Telefon",
+            additionalInfo: "Lisainfo",
+            inputs: {
+              email: "email@mail.com",
+              phone: "+372 123 4567",
+            },
+            errors: {
+              name: "Eesnimi on kohustuslik",
+              surname: "Perekonnanimi on kohustuslik",
+              email: "E-post on kohustuslik",
+              phone: "Telefon on kohustuslik",
+              validEmail: "Sisestage korrektne e-posti aadress",
+              validPhone: "Sisestage korrektne telefoninumber",
+            },
+          },
+        },
+        summary: {
+          title: "Tellimuse kokkuvõte",
+          container: "Konteiner",
+          rentalPeriod: "Rendiperiood",
+          rentalPrice: "Rendihind",
+          mileage: "Läbisõit",
+          taxes: "Käibemaks",
+          total: "Kokku",
+          finalPrice: "Lõplik hind",
+          includedWeight: "Valitud kaal on hinna sees",
+          includedDays: "Valitud päevad on hinna sees",
+          includedMileage: "Valitud läbisõit on hinna sees",
+          notIncludedMileage:
+            "Lisakilomeetreid arvestatakse ainult Tallinnast väljas",
+          additionalWeight: "Lisakaal",
+          weight: "Kaal",
+          dateFrom: "Alates",
+          dateTo: "Kuni",
+        },
+      },
+    },
+    ru: {
+      welcome: "Здравствуйте",
+      indexMainPhrase: "Интеллектуальные логистические решения для вас",
+      indexMainText:
+        "Veosprinter специализируется на аренде премиальной строительной техники, предоставляя надёжные транспортные средства и оборудование для жилищных и коммерческих проектов. Наш обширный автопарк обслуживает подрядчиков и строителей, предлагая гибкие условия аренды и гарантируя успех проектов благодаря качественной технике и превосходному сервису.",
+      indexMainButton: "Заказать",
+      home: "Главная",
+      services: "Услуги",
+      pricing: "Цены",
+      aboutUs: "О нас",
+      contact: "Контакт",
+      orderButton: "Заказать",
+      index: {
+        secondComponent: {
+          title: "Горячие предложения",
+        },
+      },
+      order: {
+        request: "Заказ",
+        contact: "Данные",
+        confirm: "Подтверждение",
+        payment: "Оплата",
+        checkout: "Проверьте заказ",
+        form: {
+          address: "Адрес",
+          estonianAddressLabel: "Эстонский адрес",
+          estonianAddressInput: "Введите ваш адрес",
+          estonianAddressDescription:
+            "Выберите ваш адрес из списка при написании",
+          selectContainer: "Выберите контейнер",
+          selectNecessaryInfo:
+            "Заполните обязательные поля для показа сводки заказа",
+          chooseVolume: "Выберите объем (m³)",
+          chooseWeight: "Выберите вес (тонны)",
+          container: "Контейнер",
+          typeOfWasteLabel: "Тип отходов",
+          typeOfWasteInput: "Выберите тип отходов",
+          chooseDateAndTimeFrom: "Выберите дату и время начала",
+          chooseDateAndTimeTo: "Выберите дату и время окончания",
+          date: "Дата",
+          time: "Время",
+          continue: "Продолжить",
+          makeYourOrder: "Сделайте ваш заказ",
+          orderStep: {
+            errors: {
+              addressFromSuggestions:
+                "Адрес из предложений обязателен для заполнения",
+              selectContainer: "Контейнер обязателен для заполнения",
+              selectWasteType: "Типы отходов обязателен для заполнения",
+              selectDateFrom: "Дата начала обязательно для заполнения",
+              selectTimeFrom: "Время начала обязательно для заполнения",
+              selectDateTo: "Дата окончания обязательно для заполнения",
+              selectTimeTo: "Время окончания обязательно для заполнения",
+              endDateAfterStartDate:
+                "Дата окончания должна быть позже даты начала",
+              endTimeAfterStartTime:
+                "Время окончания должно быть позже времени начала",
+            },
+          },
+          contactStep: {
+            name: "Имя",
+            surname: "Фамилия",
+            email: "Электронная почта",
+            phone: "Телефон",
+            additionalInfo: "Дополнительная информация",
+            inputs: {
+              email: "email@mail.com",
+              phone: "+372 123 4567",
+            },
+            errors: {
+              name: "Имя обязательно для заполнения",
+              surname: "Фамилия обязательна для заполнения",
+              email: "Электронная почта обязательна для заполнения",
+              phone: "Телефон обязателен для заполнения",
+              validEmail: "Введите корректный адрес электронной почты",
+              validPhone: "Введите корректный номер телефона",
+            },
+          },
+        },
+        summary: {
+          title: "Сводка заказа",
+          container: "Контейнер",
+          rentalPeriod: "Срок аренды",
+          rentalPrice: "Цена аренды",
+          taxes: "НДС",
+          mileage: "Киломентраж",
+          total: "Итого",
+          finalPrice: "Итоговая цена",
+          includedWeight: "Выбранный вес включен в цену",
+          includedDays: "Выбранные дни включены в цену",
+          additionalWeight: "Дополнительный вес",
+          includedMileage: "Выбранный километраж включен в цену",
+          notIncludedMileage:
+            "Дополнительный пробег рассчитывается только за пределами Таллинна",
+          weight: "Вес",
+          dateFrom: "От",
+          dateTo: "До",
+        },
+      },
+    },
+    en: {
+      welcome: "Welcome",
+      indexMainPhrase: "Your choice for intelligent logistics",
+      indexMainText:
+        "Veosprinter specializes in premium construction equipment rentals, providing reliable vehicles and machinery for residential and commercial projects. Our extensive fleet serves contractors and builders with flexible rental solutions, ensuring project success through quality equipment and superior service.",
+      indexMainButton: "Order",
+      home: "Home",
+      services: "Services",
+      pricing: "Pricing",
+      aboutUs: "About Us",
+      contact: "Contact",
+      orderButton: "Order",
+      index: {
+        secondComponent: {
+          title: "Special Offers",
+        },
+      },
+      order: {
+        request: "Order",
+        contact: "Contact",
+        confirm: "Confirm Order",
+        payment: "Payment",
+        checkout: "Checkout",
+        form: {
+          address: "Address",
+          estonianAddressLabel: "Estonian Address",
+          estonianAddressInput: "Enter your address",
+          estonianAddressDescription:
+            "Select your address from the list when typing",
+          selectContainer: "Select Container",
+          selectNecessaryInfo: "Fill in the required fields for order summary",
+          chooseVolume: "Choose Volume (m³)",
+          chooseWeight: "Choose Weight (Tonnes)",
+          chooseDateAndTimeFrom: "Choose start date and time",
+          chooseDateAndTimeTo: "Choose end date and time",
+          date: "Date",
+          time: "Time",
+          container: "Container",
+          typeOfWasteLabel: "Type of Waste",
+          typeOfWasteInput: "Select type of waste",
+          continue: "Continue",
+          makeYourOrder: "Make your order",
+          orderStep: {
+            errors: {
+              addressFromSuggestions: "Address from suggestions is required",
+              selectContainer: "Container field is required",
+              selectWasteType: "Waste type field is required",
+              selectDateFrom: "Start date is required",
+              selectTimeFrom: "Start time is required",
+              selectDateTo: "End date is required",
+              selectTimeTo: "End time is required",
+              endDateAfterStartDate: "End date must be after start date",
+              endTimeAfterStartTime: "End time must be after start time",
+            },
+          },
+          contactStep: {
+            name: "Name",
+            surname: "Surname",
+            email: "Email",
+            phone: "Phone",
+            additionalInfo: "Additional Information",
+            inputs: {
+              email: "email@mail.com",
+              phone: "+372 123 4567",
+            },
+            errors: {
+              name: "Name field is required",
+              surname: "Surname field is required",
+              email: "Email field is required",
+              phone: "Phone field is required",
+              validEmail: "Enter a valid email address",
+              validPhone: "Enter a valid phone number",
+            },
+          },
+        },
+        summary: {
+          title: "Order Summary",
+          container: "Container",
+          rentalPeriod: "Rental Period",
+          rentalPrice: "Rental Price",
+          mileage: "Mileage",
+          taxes: "Taxes",
+          total: "Total",
+          finalPrice: "Final Price",
+          additionalWeight: "Additional Weight",
+          weight: "Weight",
+          includedWeight: "Selected weight is included in the price",
+          includedDays: "Selected days are included in the price",
+          includedMileage: "Selected mileage is included in the price",
+          notIncludedMileage:
+            "Additional mileage is calculated only outside of Tallinn",
+          dateFrom: "From",
+          dateTo: "To",
+        },
+      },
+    },
+  },
+}));

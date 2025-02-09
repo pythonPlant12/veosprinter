@@ -1,9 +1,6 @@
-# admin.py
-
 from django.contrib import admin
-from unfold.admin import ModelAdmin
 
 
-@admin.register(MyModel)
-class CustomAdminClass(ModelAdmin):
-    pass
+class ModelAdmin(admin.ModelAdmin):
+    class Media:
+        css = {"all": ("admin/css/custom.css",)}

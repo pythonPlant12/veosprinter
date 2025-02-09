@@ -1,0 +1,9 @@
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 88
+extend-select = ['E', 'F', 'B', 'C90']
+fix = true
