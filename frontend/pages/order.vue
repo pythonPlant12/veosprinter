@@ -181,6 +181,7 @@ const steps = [
       </p>
     </div>
     <div class="flex flex-col lg:flex-row gap-12">
+
       <div class="calculator w-full lg:w-2/3 relative">
         <Stepper v-model="currentStep" class="">
           <StepperItem

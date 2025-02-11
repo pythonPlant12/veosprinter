@@ -14,6 +14,13 @@ export default defineI18nConfig(() => ({
       aboutUs: "Meist",
       contact: "Kontakt",
       orderButton: "Telli",
+      navbar: {
+        main: "Avaleht",
+        services: "Teenused",
+        wastageKind: "Jäätmeliigid",
+        containers: "Konteinerid",
+        aboutUs: "Meist",
+      },
       index: {
         secondComponent: {
           title: "Kuumad Pakkumised",
@@ -111,6 +118,13 @@ export default defineI18nConfig(() => ({
       aboutUs: "О нас",
       contact: "Контакт",
       orderButton: "Заказать",
+      navbar: {
+        main: "Главная",
+        services: "Услуги",
+        wastageKind: "Виды отходов",
+        containers: "Контейнеры",
+        aboutUs: "О нас",
+      },
       index: {
         secondComponent: {
           title: "Горячие предложения",
@@ -210,6 +224,14 @@ export default defineI18nConfig(() => ({
       pricing: "Pricing",
       aboutUs: "About Us",
       contact: "Contact",
+      navbar: {
+        main: "Main",
+        services: "Services",
+        wastageKind: "Waste Types",
+        containers: "Containers",
+        aboutUs: "About us",
+      },
+
       orderButton: "Order",
       index: {
         secondComponent: {
