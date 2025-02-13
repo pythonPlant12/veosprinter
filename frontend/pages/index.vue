@@ -1,16 +1,17 @@
 <script setup lang="ts">
-const secondComponent = ref(null)
+const secondComponent = ref(null);
 const scrollToSecond = () => {
   secondComponent.value.$el.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  })
-}
+    behavior: "smooth",
+    inline: "start",
+    block: "start",
+  });
+};
 </script>
 <template>
- <div>
-   <index-main-component @scroll-to-second="scrollToSecond" />
-   <index-second-component ref="secondComponent" />
- </div>
+  <div>
+    <index-main-component @scroll-to-second="scrollToSecond" />
+    <index-second-component ref="secondComponent" class="pt-4" />
+  </div>
 </template>
 <style></style>

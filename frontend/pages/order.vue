@@ -32,11 +32,11 @@ function handleContainerSubmit(data) {
   currentStep.value = 2;
 }
 
-function handleContactSubmit(data) {
+async function handleContactSubmit(data) {
   combinedData = { ...orderData.value, ...data, ...selectedContainer };
   orderDataForApi = createOrderDataForApi(combinedData);
   console.log(orderDataForApi);
-  sendOrderDataToApi();
+  await sendOrderDataToApi();
   currentStep.value = 3;
 }
 async function sendOrderDataToApi() {
@@ -69,7 +69,7 @@ function createOrderDataForApi(combinedData) {
     wastage: combinedData.wastage,
     container: combinedData.id,
     description: combinedData.description,
-    extra_km: combinedData.extra_mileage,
+    extra_km: combinedData.extra_mileage?.toFixed(2),
     price_extra_km: Number(combinedData.price_extra_mileage),
     total_price_extra_km: combinedData.total_price_extra_mileage?.toFixed(2),
     included_weight: combinedData.included_weight,
@@ -180,10 +180,12 @@ const steps = [
         {{ t("order.form.makeYourOrder") }}
       </p>
     </div>
-    <div class="flex flex-col lg:flex-row gap-12">
-
-      <div class="calculator w-full lg:w-2/3 relative">
-        <Stepper v-model="currentStep" class="">
+    <div class="flex flex-col lg:flex-row gap-12 justify-center">
+      <div
+        class="calculator w-full lg:w-2/3 relative"
+        :class="{ 'w-full justify-center': currentStep === 3 }"
+      >
+        <Stepper v-model="currentStep" class="w-[380px] mx-auto md:w-full">
           <StepperItem
             v-for="item in steps"
             :key="item.step"
@@ -203,7 +205,7 @@ const steps = [
             </StepperTrigger>
             <StepperSeparator
               v-if="item.step !== steps[steps.length - 1].step"
-              class="w-full h-px"
+              class="w-full h-px hidden md:block"
             />
           </StepperItem>
         </Stepper>
@@ -228,22 +230,34 @@ const steps = [
           <div v-else-if="currentStep === 2">
             <contact-form @contact-order="handleContactSubmit" />
           </div>
-          <div v-else-if="currentStep === 3">
-            <payment-form
-              :order-data="orderFormData"
-              @submit-payment="
-                (data) => {
-                  // Handle payment form submission
-                }
-              "
+          <div
+            v-else-if="currentStep === 3"
+            class="flex mx-auto justify-center mt-10"
+          >
+            <order-summary
+              :t="t"
+              :order-data="orderData"
+              :loading-data="loadingData"
             />
+
+            <!--<payment-form-->
+            <!--  :order-data="orderFormData"-->
+            <!--  @submit-payment="-->
+            <!--    (data) => {-->
+            <!--      // Handle payment form submission-->
+            <!--    }-->
+            <!--  "-->
+            <!--/>-->
           </div>
         </Transition>
       </div>
-      <div>
+      <div v-if="currentStep !== 3">
         <Separator class="" orientation="vertical" />
       </div>
-      <div class="price w-full lg:w-1/3 flex justify-center">
+      <div
+        v-if="currentStep !== 3"
+        class="price w-full lg:w-1/3 flex justify-center"
+      >
         <order-summary
           :t="t"
           :order-data="orderData"
