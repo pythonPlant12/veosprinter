@@ -7,8 +7,7 @@
         <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
           {{ $t("about.description") }}
         </p>
-        <div class="bg-stone-100 dark:bg-stone-900 rounded-lg p-6 mb-8">
-          <p class="text-lg text-gray-800 dark:text-gray-200 mb-4">
+        <div class="bg-stone-100 dark:bg-stone-900 rounded-lg p-6 mb-8"><p class="text-lg text-gray-800 dark:text-gray-200 mb-4">
             {{ $t("about.experience") }}
           </p>
           <p class="text-lg text-gray-800 dark:text-gray-200">
