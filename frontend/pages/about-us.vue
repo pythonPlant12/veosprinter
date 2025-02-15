@@ -7,7 +7,8 @@
         <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
           {{ $t("about.description") }}
         </p>
-        <div class="bg-stone-100 dark:bg-stone-900 rounded-lg p-6 mb-8"><p class="text-lg text-gray-800 dark:text-gray-200 mb-4">
+        <div class="bg-stone-100 dark:bg-stone-900 rounded-lg p-6 mb-8">
+          <p class="text-lg text-gray-800 dark:text-gray-200 mb-4">
             {{ $t("about.experience") }}
           </p>
           <p class="text-lg text-gray-800 dark:text-gray-200">
@@ -23,11 +24,11 @@
           src="/wastes/household.png"
           alt="About VeoSprinter"
           class="w-full rounded-lg shadow-lg"
-        />
+        >
         <div class="absolute inset-0 flex items-center justify-center">
           <div
             class="bg-white dark:bg-gray-800 bg-opacity-75 dark:bg-opacity-75 rounded-lg p-6"
-          ></div>
+          />
         </div>
       </div>
     </div>

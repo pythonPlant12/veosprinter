@@ -6,50 +6,50 @@
           :src="getCurrentFlag"
           :alt="currentLocale"
           class="w-6 h-4 rounded-sm object-cover"
-        />
+        >
         <span class="text-sm">{{ getCurrentLanguage }}</span>
         <ChevronDown class="w-4 h-4" />
       </DropdownMenuTrigger>
 
       <DropdownMenuContent class="w-32">
         <DropdownMenuItem
-          @click="switchLanguage('ee')"
           :class="{ 'bg-accent': currentLocale === 'ee' }"
+          @click="switchLanguage('ee')"
         >
           <div class="flex items-center gap-3 w-full">
             <img
               src="/flags/ee.png"
               alt="Estonian"
               class="w-6 h-4 rounded-sm object-cover"
-            />
+            >
             <span>Eesti</span>
           </div>
         </DropdownMenuItem>
 
         <DropdownMenuItem
-          @click="switchLanguage('ru')"
           :class="{ 'bg-accent': currentLocale === 'ru' }"
+          @click="switchLanguage('ru')"
         >
           <div class="flex items-center gap-3 w-full">
             <img
               src="/flags/ru.png"
               alt="Russian"
               class="w-6 h-4 rounded-sm object-cover"
-            />
+            >
             <span>Русский</span>
           </div>
         </DropdownMenuItem>
 
         <DropdownMenuItem
-          @click="switchLanguage('en')"
           :class="{ 'bg-accent': currentLocale === 'en' }"
+          @click="switchLanguage('en')"
         >
           <div class="flex items-center gap-3 w-full">
             <img
               src="/flags/en.png"
               alt="English"
               class="w-6 h-4 rounded-sm object-cover"
-            />
+            >
             <span>English</span>
           </div>
         </DropdownMenuItem>
