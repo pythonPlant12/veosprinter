@@ -191,7 +191,7 @@
                       }}</span>
                       <CalendarIcon class="ms-auto h-4 w-4 opacity-50" />
                     </Button>
-                    <input v-bind="componentField" hidden />
+                    <input v-bind="componentField" hidden >
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent class="w-auto p-0">
@@ -267,7 +267,7 @@
                       }}</span>
                       <CalendarIcon class="ms-auto h-4 w-4 opacity-50" />
                     </Button>
-                    <input v-bind="componentField" hidden />
+                    <input v-bind="componentField" hidden >
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent class="w-auto p-0">

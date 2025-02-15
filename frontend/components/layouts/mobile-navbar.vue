@@ -174,7 +174,7 @@ const wastageTypes = [
                 :src="getCurrentFlag"
                 :alt="currentLocale"
                 class="w-6 h-4 rounded-sm object-cover"
-              />
+              >
               <span class="text-sm font-bold">{{ getCurrentLanguage }}</span>
               <ChevronDown class="w-4 h-4" />
             </DropdownMenuTrigger>
@@ -189,7 +189,7 @@ const wastageTypes = [
                     src="/flags/ee.png"
                     alt="Estonian"
                     class="w-6 h-4 rounded-sm object-cover"
-                  />
+                  >
                   <span>Eesti</span>
                 </div>
               </DropdownMenuItem>
@@ -203,7 +203,7 @@ const wastageTypes = [
                     src="/flags/ru.png"
                     alt="Russian"
                     class="w-6 h-4 rounded-sm object-cover"
-                  />
+                  >
                   <span>Русский</span>
                 </div>
               </DropdownMenuItem>
@@ -217,7 +217,7 @@ const wastageTypes = [
                     src="/flags/en.png"
                     alt="English"
                     class="w-6 h-4 rounded-sm object-cover"
-                  />
+                  >
                   <span>English</span>
                 </div>
               </DropdownMenuItem>
