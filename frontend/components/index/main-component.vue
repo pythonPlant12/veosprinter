@@ -36,7 +36,7 @@
             alt="Container"
             src="/index/open_container_image.webp"
             class="w-full h-full object-cover md:object-contain fade-in-delay-4"
-          >
+          />
           <div class="absolute inset-0 md:hidden" />
         </div>
       </div>

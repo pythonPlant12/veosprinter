@@ -17,7 +17,7 @@
           :src="`/wastes/${type}.png`"
           :alt="$t(`wastes.${type}.imageAlt`)"
           class="w-full h-auto object-cover"
-        >
+        />
       </div>
 
       <!-- Information Section -->

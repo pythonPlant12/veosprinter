@@ -24,7 +24,7 @@
           src="/wastes/household.png"
           alt="About VeoSprinter"
           class="w-full rounded-lg shadow-lg"
-        >
+        />
         <div class="absolute inset-0 flex items-center justify-center">
           <div
             class="bg-white dark:bg-gray-800 bg-opacity-75 dark:bg-opacity-75 rounded-lg p-6"

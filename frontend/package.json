@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "start": "nuxt start",
     "prepare": "husky",
-    "format": "prettier --write \"**/*.{js,ts,vue,json,css,scss,md}\" && eslint . --fix",
+    "lint": "eslint . --no-cache --fix-dry-run --max-warnings 99999",
+    "format": "prettier --write \"**/*.{js,ts,vue,json,css,scss,md}\"",
     "format:commit": "lint-staged"
   },
   "lint-staged": {

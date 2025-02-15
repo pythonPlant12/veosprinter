@@ -18,7 +18,7 @@
           src="/containers/container1.jpeg"
           alt="Small Container"
           class="w-full h-48 object-cover"
-        >
+        />
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-2">
             {{ $t("containers.small.title") }}
@@ -55,7 +55,7 @@
           src="/containers/container3.png"
           alt="Medium Container"
           class="w-full h-48 object-cover"
-        >
+        />
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-2">
             {{ $t("containers.medium.title") }}
@@ -92,7 +92,7 @@
           src="/containers/container2.jpeg"
           alt="Large Container"
           class="w-full h-48 object-cover"
-        >
+        />
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-2">
             {{ $t("containers.large.title") }}
@@ -129,7 +129,7 @@
           src="/containers/container4.png"
           alt="Extra Large Container"
           class="w-full h-48 object-cover"
-        >
+        />
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-2">
             {{ $t("containers.xl.title") }}

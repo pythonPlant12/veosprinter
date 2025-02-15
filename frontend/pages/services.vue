@@ -16,7 +16,7 @@
             src="/icons/waste.svg"
             alt="Waste Management"
             class="w-12 h-12 mr-4"
-          >
+          />
           <h2 class="text-2xl font-semibold">
             {{ $t("services.wasteManagement.title") }}
           </h2>
@@ -33,7 +33,7 @@
             src="/icons/container.svg"
             alt="Container Rental"
             class="w-12 h-12 mr-4"
-          >
+          />
           <h2 class="text-2xl font-semibold">
             {{ $t("services.containerRental.title") }}
           </h2>
@@ -50,7 +50,7 @@
             src="/icons/customized.svg"
             alt="Customized Solutions"
             class="w-12 h-12 mr-4"
-          >
+          />
           <h2 class="text-2xl font-semibold">
             {{ $t("services.customizedSolutions.title") }}
           </h2>
@@ -72,7 +72,7 @@
             src="/icons/availability.svg"
             alt="Full Availability"
             class="w-12 h-12 mr-4"
-          >
+          />
           <div>
             <h3 class="text-xl font-semibold mb-2">
               {{ $t("services.features.availability.title") }}
@@ -87,7 +87,7 @@
             src="/icons/flexibility.svg"
             alt="Flexibility"
             class="w-12 h-12 mr-4"
-          >
+          />
           <div>
             <h3 class="text-xl font-semibold mb-2">
               {{ $t("services.features.flexibility.title") }}

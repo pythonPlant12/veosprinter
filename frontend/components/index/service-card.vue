@@ -28,7 +28,7 @@ defineProps<{
           src="/icons/track.svg"
           class="mr-2 h-4 w-4 text-white"
           alt="track icon"
-        >
+        />
         Broneeri
       </Button>
     </CardHeader>

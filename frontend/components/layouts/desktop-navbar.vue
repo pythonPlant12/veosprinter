@@ -84,7 +84,7 @@ const wasteTypes = [
                     class="flex h-full w-full select-none flex-col justify-end rounded-md bg-neutral-50 from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    <img src="/navbar/container_navbar.png" alt="Kontainer" >
+                    <img src="/navbar/container_navbar.png" alt="Kontainer" />
                   </a>
                 </NavigationMenuLink>
               </li>
