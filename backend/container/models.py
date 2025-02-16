@@ -18,10 +18,12 @@ class Container(models.Model):
     price_extra_day = models.DecimalField(max_digits=10, decimal_places=2)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     price_extra_weight = models.DecimalField(max_digits=10, decimal_places=2)
-    wastage = models.ForeignKey("wastage.Wastage", on_delete=models.CASCADE)
+    wastage = models.ForeignKey(
+        "wastage.Wastage", on_delete=models.CASCADE, related_query_name="containers"
+    )
 
     def __str__(self):
-        return self.name
+        return self.name_ru + " (" + self.wastage.name_ru + ")"
 
     class Meta:
         verbose_name = "Контейнер"

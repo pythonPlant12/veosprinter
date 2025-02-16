@@ -33,7 +33,7 @@ function handleContainerSubmit(data) {
 }
 
 async function handleContactSubmit(data) {
-  combinedData = { ...orderData.value, ...data, ...selectedContainer };
+  combinedData = { ...orderData.value, ...selectedContainer, ...data };
   orderDataForApi = createOrderDataForApi(combinedData);
   console.log(orderDataForApi);
   await sendOrderDataToApi();

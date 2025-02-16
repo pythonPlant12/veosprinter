@@ -113,6 +113,17 @@ export default defineI18nConfig(() => ({
           "VeoSprinter, jäätmekäitlus, konteinerite rent, Eesti ettevõte, klientide rahulolu",
       },
       services: {
+        transportSubtitle: "Jäätmete transporditeenus",
+        container: "Konteiner",
+        containerSizes: "Saadaval suurused",
+        transport: "Transport",
+        transportDescription: "Konteineri kohaletoimetamine ja äraviimine",
+        utilization: "Utiliseerimine",
+        tons: "tonni",
+        perTon: "tonn",
+        rent: "Rent",
+        afterDays: "Pärast {days} päeva",
+        perDay: "päev",
         title: "Teenused",
         description:
           "Pakume terviklikke jäätmekäitlusteenuseid üle kogu Eesti. Meie konteinerite rent sobib kõigile jäätmeliikidele ja kohandame lahendusi vastavalt teie vajadustele.",
@@ -150,6 +161,11 @@ export default defineI18nConfig(() => ({
           "VeoSprinter pakub terviklikke jäätmekäitlusteenuseid ja konteinerite renti üle kogu Eesti. Usaldusväärne partner teie jäätmekäitluse vajadusteks.",
         metaKeywords:
           "jäätmekäitlus, konteinerite rent, ehitusjäätmed, kohandatud lahendused, üle-eestiline teenus",
+      },
+      common: {
+        startingFrom: "Alates",
+        perTransport: "EUR / transport",
+        book: "Broneeri",
       },
       wastes: {
         "Household Waste": "Olmejäätmed",
@@ -511,6 +527,17 @@ export default defineI18nConfig(() => ({
           "VeoSprinter, управление отходами, аренда контейнеров, эстонская компания, удовлетворенность клиентов",
       },
       services: {
+        transportSubtitle: "Услуга вывоза отходов",
+        container: "Контейнер",
+        containerSizes: "Доступные размеры",
+        transport: "Транспорт",
+        transportDescription: "Доставка и вывоз контейнера",
+        utilization: "Утилизация",
+        tons: "тонн",
+        perTon: "тонну",
+        rent: "Аренда",
+        afterDays: "После {days} дней",
+        perDay: "день",
         title: "Услуги",
         description:
           "Мы предлагаем комплексные услуги по управлению отходами по всей Эстонии. Наша аренда контейнеров подходит для всех типов отходов, и мы адаптируем решения под ваши потребности.",
@@ -548,6 +575,11 @@ export default defineI18nConfig(() => ({
           "VeoSprinter предлагает комплексные услуги по управлению отходами и аренде контейнеров по всей Эстонии. Надежный партнер для ваших нужд в управлении отходами.",
         metaKeywords:
           "управление отходами, аренда контейнеров, строительные отходы, индивидуальные решения, общеэстонский сервис",
+      },
+      common: {
+        startingFrom: "От",
+        perTransport: "EUR / транспорт",
+        book: "Заказать",
       },
       containers: {
         title: "Аренда Контейнеров",
@@ -921,6 +953,17 @@ export default defineI18nConfig(() => ({
           "VeoSprinter, waste management, container rental, Estonian company, customer satisfaction",
       },
       services: {
+        transportSubtitle: "Waste Transport Service",
+        container: "Container",
+        containerSizes: "Available sizes",
+        transport: "Transport",
+        transportDescription: "Container delivery and pickup",
+        utilization: "Utilization",
+        tons: "tons",
+        perTon: "ton",
+        rent: "Rental",
+        afterDays: "After {days} days",
+        perDay: "day",
         title: "Services",
         description:
           "We offer comprehensive waste management services throughout Estonia. Our container rental is suitable for all types of waste, and we adapt solutions to your needs.",
@@ -958,6 +1001,11 @@ export default defineI18nConfig(() => ({
           "VeoSprinter offers comprehensive waste management services and container rentals throughout Estonia. A reliable partner for your waste management needs.",
         metaKeywords:
           "waste management, container rental, construction waste, customized solutions, Estonia-wide service",
+      },
+      common: {
+        startingFrom: "Starting from",
+        perTransport: "EUR / transport",
+        book: "Book",
       },
       wastes: {
         "Household Waste": "Household Waste",

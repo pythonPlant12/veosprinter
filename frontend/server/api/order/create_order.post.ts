@@ -1,6 +1,3 @@
-import { defineEventHandler, readBody } from "h3";
-import { getAuthHeaders } from "~/server/utils/auth";
-
 export default defineEventHandler(async (event) => {
   try {
     const body = await readBody(event);

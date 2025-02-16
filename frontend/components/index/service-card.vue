@@ -4,12 +4,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
-defineProps<{
+interface ServiceDescription {
+  title: string;
+  description: string;
+}
+
+interface ServiceCardProps {
   title: string;
   subtitle: string;
   price: string;
   descriptions: ServiceDescription[];
-}>();
+}
+
+defineProps<ServiceCardProps>();
 </script>
 
 <template>
@@ -22,9 +29,9 @@ defineProps<{
       <Separator class="my-1" />
 
       <p class="text-4xl">
-        <span class="text-sm">Alates </span
-        ><span class="font-semibold text-1xl">{{ price }}</span
-        ><span class="text-sm">EUR / transport</span>
+        <span class="text-sm">{{ $t("common.startingFrom") }} </span>
+        <span class="font-semibold text-1xl">{{ price }}</span>
+        <span class="text-sm">{{ $t("common.perTransport") }}</span>
       </p>
       <Button :variant="'default'" class="w-full mt-2">
         <img
@@ -32,7 +39,7 @@ defineProps<{
           class="mr-2 h-4 w-4 text-white"
           alt="track icon"
         />
-        Broneeri
+        {{ $t("common.book") }}
       </Button>
     </CardHeader>
     <CardContent class="grid gap-4">

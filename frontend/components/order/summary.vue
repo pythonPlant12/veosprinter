@@ -18,7 +18,7 @@
               {{ $t("order.summary.container") }}
             </p>
             <Separator />
-            <p class="text-sm font-medium text-neutral-700">
+            <p class="text-sm font-medium text-neutral-700 dark:text-white">
               {{
                 $i18n.locale === "ru"
                   ? orderData?.name_ru
@@ -27,7 +27,9 @@
                     : orderData?.name
               }}
             </p>
-            <p class="text-sm font-medium text-neutral-500">
+            <p
+              class="text-sm font-medium text-neutral-500 dark:text-neutral-400"
+            >
               {{
                 $i18n.locale === "ru"
                   ? orderData?.description_ru
@@ -52,7 +54,7 @@
             <!-- Kilometers -->
             <div class="mb-4">
               <p class="text-sm font-bold">{{ $t("order.form.address") }}</p>
-              <p class="text-sm text-neutral-500">
+              <p class="text-sm text-neutral-500 dark:text-neutral-400">
                 {{ orderData?.address }}
               </p>
             </div>
@@ -64,10 +66,10 @@
                 <p class="text-sm font-bold">
                   {{ $t("order.summary.mileage") }}
                 </p>
-                <p class="text-sm text-neutral-500">
+                <p class="text-sm text-neutral-500 dark:text-neutral-400">
                   + {{ orderData?.extra_mileage.toFixed(2) }} km
                 </p>
-                <p class="text-xs text-neutral-400">
+                <p class="text-xs text-neutral-500 dark:text-neutral-400">
                   {{ $t("order.summary.notIncludedMileage") }}
                 </p>
               </div>
@@ -81,7 +83,7 @@
               <p class="text-sm font-bold">
                 {{ $t("order.summary.mileage") }}
               </p>
-              <p class="text-sm text-muted-foreground">
+              <p class="text-sm text-neutral-500 dark:text-neutral-400">
                 {{ $t("order.summary.includedMileage") }}
               </p>
             </div>
@@ -107,7 +109,7 @@
                 <p class="text-sm font-bold">
                   {{ $t("order.summary.weight") }}
                 </p>
-                <p class="text-sm text-neutral-500">
+                <p class="text-sm text-neutral-500 dark:text-neutral-400">
                   {{ $t("order.summary.includedWeight") }}
                 </p>
               </div>

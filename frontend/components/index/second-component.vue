@@ -1,157 +1,80 @@
 <script setup lang="ts">
+import { useIntersectionObserver } from "@vueuse/core";
 import ServiceCard from "~/components/index/service-card.vue";
+import type { SpecialOffersApi } from "~/types/secondScreen/serviceCard";
 
-const { elements: cards } = useIntersectionObserver();
-const services: ServiceCard[] = [
-  {
-    id: 1,
-    title: "Ehituspraht",
-    subtitle: "Ehitusjäätmete äravedu",
-    price: "€300",
+const cards = ref([]);
+const specialOffers = ref<SpecialOffersApi[]>([]);
+const containerRef = ref(null);
+const { t } = useI18n();
+
+watch(specialOffers, (newValue) => {
+  if (newValue.length > 0) {
+    const { stop } = useIntersectionObserver(
+      containerRef,
+      ([{ isIntersecting }]) => {
+        if (isIntersecting) {
+          cards.value.forEach((card, index) => {
+            if (card && card.$el) {
+              setTimeout(() => {
+                card.$el.style.opacity = "1";
+              }, index * 150);
+            }
+          });
+        }
+      },
+      { threshold: 0.1 },
+    );
+  }
+});
+
+const getSpecialOffers = async () => {
+  await $fetch("api/special-offers", {
+    method: "GET",
+  })
+    .then((response: SpecialOffersApi[]) => {
+      specialOffers.value = response;
+      console.log(response);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+
+const formatOfferData = (offer: WasteService) => {
+  return {
+    id: offer.wastage,
+    title: offer.wastage_name,
+    subtitle: t("services.transportSubtitle"),
+    price: `€${offer.price}`,
     descriptions: [
       {
-        title: "Konteiner",
-        description: "Valik konteinereid: 15m³, 20m³, 30m³",
+        title: t("services.container"),
+        description: `${t("services.containerSizes")}: ${offer.available_container_sizes.join("m³, ")}m³`,
       },
       {
-        title: "Transport",
-        description: "Konteineri kohaletoimetamine ja äraviimine",
+        title: t("services.transport"),
+        description: t("services.transportDescription"),
       },
       {
-        title: "Utiliseerimine",
-        description: "2.5 tonni ehitusprügi + €75/tonn",
+        title: t("services.utilization"),
+        description: `${offer.included_weight} ${t("services.tons")} + €${offer.extra_price_weight}/${t("services.perTon")}`,
       },
       {
-        title: "Rent",
-        description: "4. päevast €5/ööpäev, max kaal 13 tonni",
+        title: t("services.rent"),
+        description: `${t("services.afterDays", { days: offer.included_days })} €${offer.extra_price_day}/${t("services.perDay")}`,
       },
     ],
-  },
-  {
-    id: 2,
-    title: "Kivi / Betoon / Pinnas",
-    subtitle: "Raskemate jäätmete äravedu",
-    price: "€170",
-    descriptions: [
-      {
-        title: "Konteiner",
-        description: "15m³ konteiner",
-      },
-      {
-        title: "Transport",
-        description: "Konteineri kohaletoimetamine ja äraviimine",
-      },
-      {
-        title: "Utiliseerimine",
-        description: "13 tonni prügi utiliseerimine",
-      },
-      {
-        title: "Rent",
-        description: "4. päevast €5/ööpäev, max kaal 13 tonni",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Eelsorteeritud Puit",
-    subtitle: "Puidujäätmete äravedu",
-    price: "€140",
-    descriptions: [
-      {
-        title: "Konteiner",
-        description: "Valik konteinereid: 15m³, 20m³, 30m³",
-      },
-      {
-        title: "Transport",
-        description: "Konteineri kohaletoimetamine ja äraviimine",
-      },
-      {
-        title: "Utiliseerimine",
-        description: "13 tonni puidu utiliseerimine",
-      },
-      {
-        title: "Rent",
-        description: "4. päevast €5/ööpäev, max kaal 13 tonni",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "Majapidamisprügi",
-    subtitle: "Majapidamisjäätmete äravedu",
-    price: "€300",
-    descriptions: [
-      {
-        title: "Konteiner",
-        description: "Valik konteinereid: 15m³, 20m³, 30m³",
-      },
-      {
-        title: "Transport",
-        description: "Konteineri kohaletoimetamine ja äraviimine",
-      },
-      {
-        title: "Utiliseerimine",
-        description: "2 tonni prügi + €85/tonn",
-      },
-      {
-        title: "Rent",
-        description: "4. päevast €5/ööpäev, max kaal 13 tonni",
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: "Puidujäätmed/Võsa",
-    subtitle: "Aia- ja puidujäätmete äravedu",
-    price: "€140",
-    descriptions: [
-      {
-        title: "Konteiner",
-        description: "Valik konteinereid: 15m³, 20m³, 30m³",
-      },
-      {
-        title: "Transport",
-        description: "Konteineri kohaletoimetamine ja äraviimine",
-      },
-      {
-        title: "Utiliseerimine",
-        description: "13 tonni puidu utiliseerimine",
-      },
-      {
-        title: "Rent",
-        description: "4. päevast €5/ööpäev, max kaal 13 tonni",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Ehituspraht",
-    subtitle: "Isolatsioonimaterjalide äravedu",
-    price: "€300",
-    descriptions: [
-      {
-        title: "Konteiner",
-        description: "Valik konteinereid: 15m³, 20m³, 30m³",
-      },
-      {
-        title: "Transport",
-        description: "Konteineri kohaletoimetamine ja äraviimine",
-      },
-      {
-        title: "Utiliseerimine",
-        description: "2 tonni prügi + €85/tonn",
-      },
-      {
-        title: "Rent",
-        description: "4. päevast €5/ööpäev, max kaal 13 tonni",
-      },
-    ],
-  },
-];
+  };
+};
+
+onMounted(async () => {
+  await getSpecialOffers();
+});
 </script>
+
 <template>
   <div id="secondComponent" class="relative py-12">
-    <!-- Content stays straight -->
     <div
       class="content mx-12 lg:mx-auto max-w-[1400px] left-1/2 mb-40 relative z-10"
     >
@@ -160,16 +83,21 @@ const services: ServiceCard[] = [
           {{ $t("index.secondComponent.title") }}
         </h1>
         <div
+          ref="containerRef"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 justify-items-center"
         >
           <service-card
-            v-for="(service, index) in services"
-            ref="cards"
-            :key="service.id"
-            :title="service.title"
-            :subtitle="service.subtitle"
-            :price="service.price"
-            :descriptions="service.descriptions"
+            v-for="(offer, index) in specialOffers"
+            :key="offer.wastage"
+            :ref="
+              (el) => {
+                cards[index] = el;
+              }
+            "
+            :title="offer.wastage_name"
+            :subtitle="t('services.transportSubtitle')"
+            :price="`€${offer.price}`"
+            :descriptions="formatOfferData(offer).descriptions"
             class="opacity-0 hover:shadow-2xl duration-500 drop-shadow-xl dark:drop-shadow-2xl dark:shadow-neutral-950"
             :style="`animation-delay: ${index * 150}ms`"
           />
@@ -201,6 +129,7 @@ const services: ServiceCard[] = [
 :root.dark #secondComponent::before {
   background-color: rgb(38 38 38); /* neutral-800 */
 }
+
 .content {
   left: 0;
 }
