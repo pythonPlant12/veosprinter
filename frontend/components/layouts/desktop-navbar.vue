@@ -42,7 +42,7 @@ const wasteTypes = [
 
 <template>
   <div
-    class="sticky flex pt-2 w-full top-0 px-8 z-20 pb-2 shadow bg-white dark:bg-gray-950 pr-28"
+    class="sticky flex pt-2 w-full top-0 px-8 z-40 pb-2 shadow bg-white dark:bg-neutral-950 pr-28"
   >
     <NuxtLink
       :to="localePath('/')"
@@ -76,12 +76,12 @@ const wasteTypes = [
           }}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul
-              class="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[minmax(0,.55fr)_minmax(0,1fr)]"
+              class="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[minmax(0,.55fr)_minmax(0,0.8fr)]"
             >
               <li class="row-span-3">
                 <NavigationMenuLink as-child>
                   <a
-                    class="flex h-full w-full select-none flex-col justify-end rounded-md bg-neutral-50 from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    class="flex h-full w-full select-none flex-col justify-end rounded-md bg-neutral-50 from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md max-w-fit"
                     href="/"
                   >
                     <img src="/navbar/container_navbar.png" alt="Kontainer" />

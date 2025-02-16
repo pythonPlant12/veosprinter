@@ -9,7 +9,6 @@ export default defineI18nConfig(() => ({
         "Veosprinter on spetsialiseerunud kvaliteetse ehitustehnika rendile, pakkudes usaldusväärseid sõidukeid ja seadmeid nii era- kui ka äriprojektidele. Meie lai masinapark teenindab töövõtjaid ja ehitajaid, pakkudes paindlikke renditingimusi ning tagades projektide edu kvaliteetse tehnika ja suurepärase teeninduse kaudu.",
       indexMainButton: "Telli kohe",
       home: "Avaleht",
-      services: "Teenused",
       pricing: "Hinnakiri",
       aboutUs: "Meist",
       contact: "Kontakt",
@@ -21,12 +20,50 @@ export default defineI18nConfig(() => ({
         containers: "Konteinerid",
         aboutUs: "Meist",
       },
+      faq: {
+        title: "Korduma Kippuvad Küsimused",
+        questions: {
+          q1: "Milliseid konteinerite suurusi on jäätmete transportimiseks saadaval?",
+          a1: "Pakume konteinereid mahuga 8 kuni 30 kuupmeetrit. Väikesed 5-10m³ konteinerid sobivad ideaalselt olmejäätmete jaoks, samas kui 20-40m³ konteinerid sobivad ehitus- või tööstusjäätmete jaoks.",
+          q2: "Kui kauaks võin konteineri kohapeale jätta?",
+          a2: "Standardne rendiperiood on 3 päeva. Siiski pakume paindlikke rendiperioode, mida saab vastavalt teie projekti vajadustele pikendada. Pikendatud perioodide eest võivad lisanduda täiendavad tasud.",
+          q3: "Milliseid jäätmeid võin konteineritesse panna?",
+          a3: "Meie konteinerid sobivad ehitusprahi, olmejäätmete, aiajäätmete ja tööstusjäätmete jaoks. Siiski nõuavad ohtlikud materjalid, kemikaalid ja teatud elektroonika erilist käitlemist ning neid ei tohi segada tavaliste jäätmetega.",
+          q4: "Kui palju aega ette tuleb konteineri tellimiseks arvestada?",
+          a4: "Soovitame broneerida 24-48 tundi ette garanteeritud tarneks. Siiski saame tihti täita ka samal päeval esitatud tellimusi, sõltuvalt konteinerite saadavusest.",
+          q5: "Kas konteineritel on kaalupiirangud?",
+          a5: "Jah, kaalupiirangud sõltuvad konteineri suurusest. Näiteks 10m³ konteineritel on 10-tonnine piirang, samas kui 40m³ konteinerid võivad mahutada kuni 20 tonni. Ülekoormamine võib kaasa tuua lisatasusid.",
+          q6: "Kas konteineri paigaldamiseks on vaja lubasid?",
+          a6: "Kui konteiner paigutatakse avalikule alale (näiteks tänavale), võib vaja minna kohalike ametite luba. Saame aidata lubade info ja nõuetega.",
+          q7: "Mis juhtub vihma korral? Kas konteinerisse koguneb vesi?",
+          a7: "Meie konteineritel on vee kogunemise vältimiseks äravooluavad. Materjalide jaoks, mis peavad kuivad püsima, saame soovi korral pakkuda kaetud konteinereid.",
+          q8: "Kuidas arvutatakse konteineri rendi hinda?",
+          a8: "Hind sisaldab kohaletoimetamist, rendiperioodi (tavaliselt 3 päeva) ja äraviimist. Lisatasud võivad lisanduda pikendatud rendiperioodide, ülekaalu või spetsiaalse jäätmekäitluse eest.",
+          q9: "Kas konteineri võib paigutada minu sissesõiduteele?",
+          a9: "Jah, konteinereid saab paigutada sissesõiduteedele. Kasutame spetsiaalset varustust, et vältida teie vara kahjustamist. Siiski pidage meeles, et rasked konteinerid võivad teatud pindadele jätta jälgi.",
+          q10: "Millistes piirkondades te konteinereid tarnite?",
+          a10: "Teenindame suuremaid linnu ja ümbritsevaid alasid 50km raadiuses. Võtke meiega ühendust, et kinnitada teenuse kättesaadavus teie konkreetses asukohas.",
+        },
+      },
+      footer: {
+        quickLinks: "Kiirlingid",
+        allRightsReserved: "Kõik õigused kaitstud",
+      },
       index: {
         secondComponent: {
           title: "Kuumad Pakkumised",
         },
       },
-
+      stats: {
+        customerSatisfaction: "Kliendi rahulolu",
+        projectsCompleted: "Teostatud projekte",
+        wasteRecycled: "Tonni jäätmeid töödeldud",
+        activeCities: "Aktiivsed linnad",
+        satisfactionRate: "98",
+        completedProjects: "1500",
+        recycledAmount: "2400",
+        citiesCount: "12",
+      },
       containers: {
         title: "Konteinerite Rendilahendused",
         description:
@@ -234,21 +271,15 @@ export default defineI18nConfig(() => ({
           instructionsItem4: "Võimalusel sorteeri suuruse ja tüübi järgi",
           environmental:
             "Sorteeritud puitu saab tõhusalt taaskasutada uuteks toodeteks või kasutada biomassikütusena, toetades jätkusuutlikku ressursikasutust.",
-          additionalInfo: [
-            {
-              title: "Sobivad materjalid",
-              content: "Puhas puit, töötlemata puitmaterjal, puitkaubaalused",
-            },
-            {
-              title: "Töötlemismeetod",
-              content:
-                "Sorteeritakse taaskasutuseks või jätkusuutlikuks kütuseks",
-            },
-            {
-              title: "Keskkonnakasulikud",
-              content: "Vähendab prügilajäätmeid ja toetab ringmajandust",
-            },
-          ],
+          additionalInfoItem1title: "Sobivad materjalid",
+          additionalInfoItem1content:
+            "Puhas puit, töötlemata puitmaterjal, puitkaubaalused",
+          additionalInfoItem2title: "Töötlemismeetod",
+          additionalInfoItem2content:
+            "Sorteeritakse taaskasutuseks või jätkusuutlikuks kütuseks",
+          additionalInfoItem3title: "Keskkonnakasulikud",
+          additionalInfoItem3content:
+            "Vähendab prügilajäätmeid ja toetab ringmajandust",
           metaTitle: "Sorteeritud puidu käitlemine | VeoSprinter",
           metaDescription:
             "Professionaalne sorteeritud puidu kogumine ja taaskasutus Tallinnas. Jätkusuutlikud puidujäätmete käitlemise lahendused.",
@@ -304,21 +335,15 @@ export default defineI18nConfig(() => ({
           instructionsItem4: "Väldi segamist muude ehitusjäätmetega",
           environmental:
             "Isolatsioonijäätmete õige käitlemine tagab sobiva utiliseerimise ja võimaliku taaskasutuse, minimeerides keskkonnamõju.",
-          additionalInfo: [
-            {
-              title: "Materjalitüübid",
-              content:
-                "Spetsialiseeritud käitlemine erinevatele isolatsioonimaterjalidele",
-            },
-            {
-              title: "Pakendamise nõuded",
-              content: "Konkreetsed juhised ohutuks utiliseerimiseks",
-            },
-            {
-              title: "Ohutusmeetmed",
-              content: "Kehtestatud kaitsvad käitlemisprotokollid",
-            },
-          ],
+          additionalInfoItem1title: "Materjalitüübid",
+          additionalInfoItem1content:
+            "Spetsialiseeritud käitlemine erinevatele isolatsioonimaterjalidele",
+          additionalInfoItem2title: "Pakendamise nõuded",
+          additionalInfoItem2content:
+            "Konkreetsed juhised ohutuks utiliseerimiseks",
+          additionalInfoItem3title: "Ohutusmeetmed",
+          additionalInfoItem3content:
+            "Kehtestatud kaitsvad käitlemisprotokollid",
           metaTitle: "Ehituse isolatsioonijäätmete äravedu | VeoSprinter",
           metaDescription:
             "Professionaalne ehituse isolatsioonimaterjalide käitlemine Tallinnas. Ohutud ja tõhusad utiliseerimislahendused.",
@@ -414,7 +439,6 @@ export default defineI18nConfig(() => ({
         "Veosprinter специализируется на аренде премиальной строительной техники, предоставляя надёжные транспортные средства и оборудование для жилищных и коммерческих проектов. Наш обширный автопарк обслуживает подрядчиков и строителей, предлагая гибкие условия аренды и гарантируя успех проектов благодаря качественной технике и превосходному сервису.",
       indexMainButton: "Заказать",
       home: "Главная",
-      services: "Услуги",
       pricing: "Цены",
       aboutUs: "О нас",
       contact: "Контакт",
@@ -426,10 +450,49 @@ export default defineI18nConfig(() => ({
         containers: "Контейнеры",
         aboutUs: "О нас",
       },
+      faq: {
+        title: "Часто Задаваемые Вопросы",
+        questions: {
+          q1: "Какие размеры контейнеров доступны для транспортировки отходов?",
+          a1: "Мы предлагаем контейнеры объемом от 8 до 30 кубических метров. Небольшие контейнеры 5-10м³ идеально подходят для бытовых отходов, а контейнеры 20-40м³ - для строительных или промышленных отходов.",
+          q2: "На какой срок можно арендовать контейнер?",
+          a2: "Стандартный период аренды составляет 3 дней. Однако мы предлагаем гибкие периоды аренды, которые могут быть продлены в зависимости от ваших потребностей. За продление может взиматься дополнительная плата.",
+          q3: "Какие виды отходов можно выбрасывать в контейнеры?",
+          a3: "Наши контейнеры подходят для строительного мусора, бытовых отходов, садового мусора и промышленных отходов. Однако опасные материалы, химикаты и определенная электроника требуют особого обращения и не могут смешиваться с обычными отходами.",
+          q4: "За какое время нужно заказывать доставку контейнера?",
+          a4: "Мы рекомендуем бронировать за 24-48 часов для гарантированной доставки. Однако мы часто можем выполнить заказы в тот же день в зависимости от наличия контейнеров.",
+          q5: "Существуют ли ограничения по весу для контейнеров?",
+          a5: "Да, ограничения по весу зависят от размера контейнера. Например, контейнеры 10м³ имеют лимит 10 тонн, а контейнеры 40м³ могут вместить до 20 тонн. Перегрузка может привести к дополнительным затратам.",
+          q6: "Нужны ли разрешения для размещения контейнера?",
+          a6: "Если контейнер будет размещен на общественной территории (например, на улице), может потребоваться разрешение от местных властей. Мы можем помочь с информацией о разрешениях и требованиях.",
+          q7: "Что происходит при дожде? Будет ли в контейнере собираться вода?",
+          a7: "Наши контейнеры оборудованы дренажными отверстиями для предотвращения накопления воды. Для материалов, которые должны оставаться сухими, мы можем предоставить крытые контейнеры по запросу.",
+          q8: "Как рассчитывается стоимость аренды контейнера?",
+          a8: "Цена включает доставку, период аренды (обычно 3 дней) и вывоз. Дополнительная плата может взиматься за продление срока аренды, перегруз или специальную обработку отходов.",
+          q9: "Можно ли поставить контейнер на мою подъездную дорожку?",
+          a9: "Да, контейнеры можно размещать на подъездных дорожках. Мы используем специальное оборудование, чтобы не повредить вашу собственность. Однако обратите внимание, что тяжелые контейнеры могут оставлять следы на некоторых поверхностях.",
+          q10: "В каких районах вы осуществляете доставку контейнеров?",
+          a10: "Мы обслуживаем крупные города и прилегающие районы в радиусе 50 км. Свяжитесь с нами, чтобы подтвердить возможность обслуживания в вашем районе.",
+        },
+      },
+      footer: {
+        quickLinks: "Быстрые ссылки",
+        allRightsReserved: "Все права защищены",
+      },
       index: {
         secondComponent: {
           title: "Горячие предложения",
         },
+      },
+      stats: {
+        customerSatisfaction: "Удовлетворенность клиентов",
+        projectsCompleted: "Выполненных проектов",
+        wasteRecycled: "Тонн переработанных отходов",
+        activeCities: "Активных городов",
+        satisfactionRate: "98",
+        completedProjects: "1500",
+        recycledAmount: "2400",
+        citiesCount: "12",
       },
       about: {
         title: "О нас",
@@ -605,21 +668,14 @@ export default defineI18nConfig(() => ({
           instructionsItem4: "Следуйте ограничениям по весу",
           environmental:
             "Правильная обработка позволяет перерабатывать материалы для новых строительных проектов, уменьшая потребность в новом сырье и месте на свалках.",
-          additionalInfo: [
-            {
-              title: "Весовые ограничения",
-              content: "Специальные контейнеры для тяжелых материалов",
-            },
-            {
-              title: "Процесс переработки",
-              content:
-                "Материалы измельчаются и повторно используются в строительстве",
-            },
-            {
-              title: "Услуги вывоза",
-              content: "Доступна тяжелая техника для вывоза",
-            },
-          ],
+          additionalInfoItem1title: "Весовые ограничения",
+          additionalInfoItem1content:
+            "Специальные контейнеры для тяжелых материалов",
+          additionalInfoItem2title: "Процесс переработки",
+          additionalInfoItem2content:
+            "Материалы измельчаются и повторно используются в строительстве",
+          additionalInfoItem3title: "Услуги вывоза",
+          additionalInfoItem3content: "Доступна тяжелая техника для вывоза",
           metaTitle: "Вывоз каменных и бетонных отходов | VeoSprinter",
           metaDescription:
             "Профессиональные услуги по вывозу камня, бетона и грунта в Таллинне. Эффективная обработка тяжелых строительных материалов.",
@@ -641,23 +697,15 @@ export default defineI18nConfig(() => ({
           instructionsItem4: "По возможности сортируйте по размеру и типу",
           environmental:
             "Сортированная древесина может эффективно перерабатываться в новые продукты или использоваться как биомасса, поддерживая устойчивое управление ресурсами.",
-          additionalInfo: [
-            {
-              title: "Приемлемые материалы",
-              content:
-                "Чистая древесина, необработанный пиломатериал, деревянные поддоны",
-            },
-            {
-              title: "Метод обработки",
-              content:
-                "Сортировка для переработки или устойчивого использования топлива",
-            },
-            {
-              title: "Экологические преимущества",
-              content:
-                "Уменьшает отходы на свалках и поддерживает циркулярную экономику",
-            },
-          ],
+          additionalInfoItem1title: "Приемлемые материалы",
+          additionalInfoItem1content:
+            "Чистая древесина, необработанный пиломатериал, деревянные поддоны",
+          additionalInfoItem2title: "Метод обработки",
+          additionalInfoItem2content:
+            "Сортировка для переработки или устойчивого использования топлива",
+          additionalInfoItem3title: "Экологические преимущества",
+          additionalInfoItem3content:
+            "Уменьшает отходы на свалках и поддерживает циркулярную экономику",
           metaTitle:
             "Управление сортированными древесными отходами | VeoSprinter",
           metaDescription:
@@ -710,21 +758,14 @@ export default defineI18nConfig(() => ({
             "Избегайте смешивания с другим строительным мусором",
           environmental:
             "Правильная обработка изоляционных отходов обеспечивает надлежащую утилизацию и возможную переработку, минимизируя воздействие на окружающую среду.",
-          additionalInfo: [
-            {
-              title: "Типы материалов",
-              content:
-                "Специализированная обработка для разных изоляционных материалов",
-            },
-            {
-              title: "Требования к упаковке",
-              content: "Конкретные указания по безопасной утилизации",
-            },
-            {
-              title: "Меры безопасности",
-              content: "Действуют протоколы защитной обработки",
-            },
-          ],
+          additionalInfoItem1title: "Типы материалов",
+          additionalInfoItem1content:
+            "Специализированная обработка для разных изоляционных материалов",
+          additionalInfoItem2title: "Требования к упаковке",
+          additionalInfoItem2content:
+            "Конкретные указания по безопасной утилизации",
+          additionalInfoItem3title: "Меры безопасности",
+          additionalInfoItem3content: "Действуют протоколы защитной обработки",
           metaTitle:
             "Утилизация строительных изоляционных отходов | VeoSprinter",
           metaDescription:
@@ -824,7 +865,6 @@ export default defineI18nConfig(() => ({
         "Veosprinter specializes in premium construction equipment rentals, providing reliable vehicles and machinery for residential and commercial projects. Our extensive fleet serves contractors and builders with flexible rental solutions, ensuring project success through quality equipment and superior service.",
       indexMainButton: "Order",
       home: "Home",
-      services: "Services",
       pricing: "Pricing",
       aboutUs: "About Us",
       contact: "Contact",
@@ -834,6 +874,35 @@ export default defineI18nConfig(() => ({
         wastageKind: "Waste Types",
         containers: "Containers",
         aboutUs: "About us",
+      },
+      footer: {
+        quickLinks: "Quick links",
+        allRightsReserved: "All Rights Reserved",
+      },
+      faq: {
+        title: "Frequently Asked Questions",
+        questions: {
+          q1: "What sizes of containers are available for waste transport?",
+          a1: "We offer containers ranging from 8 to 30 cubic meters. Small 5-10m³ containers are perfect for household waste, while 20-40m³ containers are ideal for construction or industrial waste.",
+          q2: "How long can I keep the container on site?",
+          a2: "Standard rental period is 3 days. However, we offer flexible rental periods that can be extended based on your project needs. Additional fees may apply for extended periods.",
+          q3: "What types of waste can I dispose of in the containers?",
+          a3: "Our containers can handle construction debris, household waste, garden waste, and industrial waste. However, hazardous materials, chemicals, and certain electronics require special handling and cannot be mixed with regular waste.",
+          q4: "How much notice do I need to give for container delivery?",
+          a4: "We recommend booking 24-48 hours in advance for guaranteed delivery. However, we can often accommodate same-day delivery requests depending on container availability.",
+          q5: "Are there any weight limits for the containers?",
+          a5: "Yes, weight limits vary by container size. For example, 10m³ containers have a 10-ton limit, while 40m³ containers can handle up to 20 tons. Overloading may result in additional charges.",
+          q6: "Do I need any permits for placing a container?",
+          a6: "If the container will be placed on public property (like a street), you may need a permit from local authorities. We can assist with permit information and requirements.",
+          q7: "What happens if it rains? Will the container collect water?",
+          a7: "Our containers are designed with drainage holes to prevent water accumulation. For materials that need to stay dry, we can provide covered containers upon request.",
+          q8: "How is pricing calculated for container rental?",
+          a8: "Pricing includes delivery, rental period (usually 3 days), and pickup. Additional fees may apply for extended rental periods, overweight loads, or specialized waste handling.",
+          q9: "Can the container be placed on my driveway?",
+          a9: "Yes, containers can be placed on driveways. We use special equipment to ensure no damage to your property. However, please note that heavy containers may leave marks on certain surfaces.",
+          q10: "What areas do you service for container delivery?",
+          a10: "We service major cities and surrounding areas within a 50km radius. Contact us to confirm service availability in your specific location.",
+        },
       },
       about: {
         title: "About Us",
@@ -1060,21 +1129,13 @@ export default defineI18nConfig(() => ({
           instructionsItem4: "Avoid mixing with other construction waste",
           environmental:
             "Proper handling of insulation waste ensures appropriate disposal and potential recycling, minimizing environmental impact.",
-          additionalInfo: [
-            {
-              title: "Material Types",
-              content:
-                "Specialized handling for different insulation materials",
-            },
-            {
-              title: "Packaging Requirements",
-              content: "Specific guidelines for safe disposal",
-            },
-            {
-              title: "Safety Measures",
-              content: "Protective handling protocols in place",
-            },
-          ],
+          additionalInfoItem1title: "Material Types",
+          additionalInfoItem1content:
+            "Specialized handling for different insulation materials",
+          additionalInfoItem2title: "Packaging Requirements",
+          additionalInfoItem2content: "Specific guidelines for safe disposal",
+          additionalInfoItem3title: "Safety Measures",
+          additionalInfoItem3content: "Protective handling protocols in place",
           metaTitle: "Construction Insulation Waste Disposal | VeoSprinter",
           metaDescription:
             "Professional handling of construction insulation materials in Tallinn. Safe and efficient disposal solutions.",
@@ -1088,6 +1149,16 @@ export default defineI18nConfig(() => ({
         secondComponent: {
           title: "Special Offers",
         },
+      },
+      stats: {
+        customerSatisfaction: "Customer Satisfaction",
+        projectsCompleted: "Projects Completed",
+        wasteRecycled: "Tons of Waste Recycled",
+        activeCities: "Active Cities",
+        satisfactionRate: "98",
+        completedProjects: "1500",
+        recycledAmount: "2400",
+        citiesCount: "12",
       },
       containers: {
         title: "Container Rental Solutions",

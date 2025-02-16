@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen">
-    <div class="flex flex-row justify-center -mt-4">
+  <div class="min-h-screen first-screen">
+    <div class="flex flex-row justify-center sm:mb-16 -mt-4">
       <div
-        class="min-h-[65vh] w-full flex flex-col md:flex-row gap-20 relative max-w-[1400px] mx-4 md:mx-16"
+        class="min-h-[65vh] w-full flex flex-col md:flex-row gap-60 sm:gap-40 relative max-w-[1400px] mx-4 md:mx-16"
       >
         <!-- Text container -->
         <div
@@ -22,7 +22,7 @@
               {{ $t("indexMainPhrase") }}
             </h3>
             <p
-              class="text-xs md:text-sm leading-relaxed max-w-prose mt-4 text-gray-500 dark:text-gray-300 fade-in-delay-3"
+              class="text-xs md:text-lg leading-relaxed max-w-prose mt-4 text-gray-500 dark:text-gray-300 fade-in-delay-3"
             >
               {{ $t("indexMainText") }}
             </p>
@@ -35,7 +35,7 @@
           <img
             alt="Container"
             src="/index/open_container_image.webp"
-            class="w-full h-full object-cover md:object-contain fade-in-delay-4"
+            class="image w-full h-full object-cover md:object-contain fade-in-delay-4"
           />
           <div class="absolute inset-0 md:hidden" />
         </div>
@@ -91,6 +91,11 @@
 </template>
 <script setup lang="ts"></script>
 <style>
+@media screen and (max-height: 670px) {
+  .image {
+    display: none;
+  }
+}
 // Animation for the arrows
 .animate-bounce-2 {
   animation: bounce 2s infinite;

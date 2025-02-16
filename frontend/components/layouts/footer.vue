@@ -6,7 +6,7 @@
         <div class="space-y-4">
           <h3 class="font-bold text-xl mb-4">VeoSprinter</h3>
           <p class="text-gray-300 text-sm">
-            {{ $t("footer.companyDescription") }}
+            {{ $t("about.description") }}
           </p>
           <div class="flex space-x-4">
             <a href="#" class="hover:text-red-300 transition-colors">
@@ -32,12 +32,12 @@
         <div class="space-y-4">
           <h3 class="font-bold text-lg mb-4">{{ $t("navbar.wastageKind") }}</h3>
           <ul class="space-y-2">
-            <li v-for="type in wastageTypes" :key="type.title">
+            <li v-for="(type, index) in wastageTypes" :key="index">
               <NuxtLink
-                :to="localePath(type.href)"
+                :to="localePath(type.route)"
                 class="text-gray-300 hover:text-white transition-colors"
               >
-                {{ type.title }}
+                {{ $t(`wastes.${type.name}`) }}
               </NuxtLink>
             </li>
           </ul>
@@ -140,7 +140,10 @@
       <div
         class="border-t border-red-800 mt-12 pt-8 text-center text-gray-300 text-sm"
       >
-        <p>© 2024 VeoSprinter. {{ $t("footer.allRightsReserved") }}</p>
+        <p>
+          © {{ new Date().getFullYear() }} VeoSprinter.
+          {{ $t("footer.allRightsReserved") }}
+        </p>
       </div>
     </div>
   </footer>
@@ -149,16 +152,28 @@
 <script setup lang="ts">
 const wastageTypes = [
   {
-    title: "Building waste",
-    href: "/waste/building",
+    name: "Household Waste",
+    route: "/waste/household",
   },
   {
-    title: "Mixed waste",
-    href: "/waste/mixed",
+    name: "Wood Waste/Branches",
+    route: "/waste/woodwaste",
   },
   {
-    title: "Garden waste",
-    href: "/waste/garden",
+    name: "Stone/Concrete/Soil",
+    route: "/waste/stoneconcrete",
+  },
+  {
+    name: "Sorted Wood",
+    route: "/waste/sortedwood",
+  },
+  {
+    name: "Construction Waste",
+    route: "/waste/constructionwaste",
+  },
+  {
+    name: "Construction Waste (Foam/Wool)",
+    route: "/waste/constructioninsulation",
   },
 ];
 </script>

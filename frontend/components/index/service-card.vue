@@ -13,7 +13,10 @@ defineProps<{
 </script>
 
 <template>
-  <Card :class="cn('w-[340px]', $attrs.class ?? '')" class="shadow-xl">
+  <Card
+    :class="cn('w-[340px]', $attrs.class ?? '')"
+    class="shadow-xl dark:shadow-neutral-500"
+  >
     <CardHeader>
       <CardTitle class="text-2xl text-red-800">{{ title }}</CardTitle>
       <Separator class="my-1" />

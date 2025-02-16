@@ -21,7 +21,7 @@
       </div>
       <div class="relative">
         <img
-          src="/wastes/household.png"
+          src="/about-us/company.jpg"
           alt="About VeoSprinter"
           class="w-full rounded-lg shadow-lg"
         />

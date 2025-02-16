@@ -150,10 +150,13 @@ const services: ServiceCard[] = [
 ];
 </script>
 <template>
-  <div id="secondComponent" class="bg-neutral-100 py-12">
-    <div class="mx-12 lg:mx-auto max-w-[1400px] left-1/2 mb-40">
+  <div id="secondComponent" class="relative py-12">
+    <!-- Content stays straight -->
+    <div
+      class="content mx-12 lg:mx-auto max-w-[1400px] left-1/2 mb-40 relative z-10"
+    >
       <div class="min-h-screen">
-        <h1 class="text-4xl font-semibold text-primary text-center py-10 mb-10">
+        <h1 class="text-4xl font-semibold text-center py-10 mb-10">
           {{ $t("index.secondComponent.title") }}
         </h1>
         <div
@@ -167,7 +170,7 @@ const services: ServiceCard[] = [
             :subtitle="service.subtitle"
             :price="service.price"
             :descriptions="service.descriptions"
-            class="opacity-0 hover:shadow-2xl duration-500 drop-shadow-xl dark:drop-shadow-xs dark:shadow-gray-800"
+            class="opacity-0 hover:shadow-2xl duration-500 drop-shadow-xl dark:drop-shadow-2xl dark:shadow-neutral-950"
             :style="`animation-delay: ${index * 150}ms`"
           />
         </div>
@@ -175,4 +178,30 @@ const services: ServiceCard[] = [
     </div>
   </div>
 </template>
-<style></style>
+
+<style>
+#secondComponent {
+  position: relative;
+  left: 0;
+}
+
+#secondComponent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(245 245 245); /* neutral-100 */
+  transform: skewY(-10deg);
+  transform-origin: top right;
+  z-index: 1;
+}
+
+:root.dark #secondComponent::before {
+  background-color: rgb(38 38 38); /* neutral-800 */
+}
+.content {
+  left: 0;
+}
+</style>

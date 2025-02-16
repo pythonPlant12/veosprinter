@@ -9,44 +9,7 @@
     </div>
 
     <!-- Containers Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Container 1 -->
-      <div
-        class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105"
-      >
-        <img
-          src="/containers/container1.jpeg"
-          alt="Small Container"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">
-            {{ $t("containers.small.title") }}
-          </h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">
-            {{ $t("containers.small.description") }}
-          </p>
-          <div class="space-y-2">
-            <div
-              class="flex items-center text-sm text-gray-500 dark:text-gray-400"
-            >
-              <span class="font-medium mr-2"
-                >{{ $t("containers.capacity") }}:</span
-              >
-              2-4 m³
-            </div>
-            <div
-              class="flex items-center text-sm text-gray-500 dark:text-gray-400"
-            >
-              <span class="font-medium mr-2"
-                >{{ $t("containers.suitableFor") }}:</span
-              >
-              {{ $t("containers.small.suitable") }}
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Container 2 -->
       <div
         class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105"

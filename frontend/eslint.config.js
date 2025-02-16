@@ -46,6 +46,16 @@ export default createConfigForNuxt({
         vueIndentScriptAndStyle: true,
       },
     ],
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
+    ],
     semi: true,
     "template-curly-spacing": ["error", "always"],
     "prefer-destructuring": [
@@ -65,12 +75,22 @@ export default createConfigForNuxt({
           "parent",
           "sibling",
           "index",
+          "object",
+          "type",
         ],
         "newlines-between": "always",
         alphabetize: {
           order: "asc",
           caseInsensitive: true,
         },
+        pathGroups: [
+          {
+            pattern: "@/**",
+            group: "internal",
+            position: "after",
+          },
+        ],
+        pathGroupsExcludedImportTypes: ["builtin"],
       },
     ],
     "object-curly-newline": [
@@ -109,6 +129,7 @@ export default createConfigForNuxt({
     prettier: true,
     import: true,
     vue: true,
+    "unused-imports": true,
   },
   languageOptions: {
     ecmaVersion: 2024,

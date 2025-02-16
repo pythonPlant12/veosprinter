@@ -3,6 +3,7 @@ export const wastage = () => {
 
   const getWastage = async () => {
     try {
+      console.log("api:", api);
       return await $fetch(`${api}/wastage/`, {
         method: "GET",
         headers: {

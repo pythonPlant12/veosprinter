@@ -3,7 +3,6 @@ import {
   Sheet,
   SheetContent,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -13,7 +12,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { NavigationMenuLink } from "~/components/ui/navigation-menu";
 import ChangeTheme from "~/components/layouts/change-theme.vue";
 import { NuxtLink } from "#components";
 import { ref } from "vue";
@@ -23,6 +21,33 @@ const isOpen = ref(false);
 const handleNavigate = () => {
   isOpen.value = false;
 };
+
+const wasteTypes = [
+  {
+    name: "Household Waste",
+    route: "/waste/household",
+  },
+  {
+    name: "Wood Waste/Branches",
+    route: "/waste/woodwaste",
+  },
+  {
+    name: "Stone/Concrete/Soil",
+    route: "/waste/stoneconcrete",
+  },
+  {
+    name: "Sorted Wood",
+    route: "/waste/sortedwood",
+  },
+  {
+    name: "Construction Waste",
+    route: "/waste/constructionwaste",
+  },
+  {
+    name: "Construction Waste (Foam/Wool)",
+    route: "/waste/constructioninsulation",
+  },
+];
 
 const { locale } = useI18n();
 const currentLocale = computed(() => locale.value);
@@ -46,29 +71,11 @@ const switchLanguage = (lang: string) => {
   isOpen.value = false;
   navigateTo(`/${lang}`);
 };
-
-const wastageTypes = [
-  {
-    title: "Building waste",
-    href: "/waste/building",
-    description: "Concrete, bricks, tiles and ceramic",
-  },
-  {
-    title: "Mixed waste",
-    href: "/waste/mixed",
-    description: "Mixed construction and demolition",
-  },
-  {
-    title: "Garden waste",
-    href: "/waste/garden",
-    description: "Branches, leaves, grass",
-  },
-];
 </script>
 
 <template>
   <Sheet v-model:open="isOpen">
-    <div class="w-full border-b shadow-sm bg-white dark:bg-gray-950">
+    <div class="w-full border-b shadow-sm bg-white dark:bg-neutral-950">
       <div class="flex items-center p-4">
         <NuxtLink
           :to="localePath('/')"
@@ -132,16 +139,13 @@ const wastageTypes = [
           <AccordionContent class="border-b-0 my-0">
             <div class="flex flex-col space-y-2">
               <NuxtLink
-                v-for="type in wastageTypes"
-                :key="type.title"
-                :to="localePath(type.href)"
+                v-for="type in wasteTypes"
+                :key="type.name"
+                :to="localePath(type.route)"
                 class="px-6 py-2 hover:bg-accent rounded-md"
                 @click="handleNavigate"
               >
-                <div class="font-medium">{{ type.title }}</div>
-                <div class="text-sm text-muted-foreground">
-                  {{ type.description }}
-                </div>
+                <div class="font-medium">{{ $t(`wastes.${type.name}`) }}</div>
               </NuxtLink>
             </div>
           </AccordionContent>
@@ -176,7 +180,6 @@ const wastageTypes = [
                 class="w-6 h-4 rounded-sm object-cover"
               />
               <span class="text-sm font-bold">{{ getCurrentLanguage }}</span>
-              <ChevronDown class="w-4 h-4" />
             </DropdownMenuTrigger>
 
             <DropdownMenuContent class="min-w-[250px]">
@@ -238,7 +241,8 @@ const wastageTypes = [
             {{ $t("orderButton") }}
           </NuxtLink>
           <p class="text-xs text-center text-gray-400">
-            <span>Veosprinter Copyright © 2025</span>
+            © {{ new Date().getFullYear() }} VeoSprinter.
+            {{ $t("footer.allRightsReserved") }}
           </p>
         </div>
       </Accordion>

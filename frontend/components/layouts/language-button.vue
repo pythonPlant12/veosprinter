@@ -91,8 +91,15 @@ const getCurrentFlag = computed(() => {
 const switchLanguage = (lang: string) => {
   const currentRoute = useRoute();
   const currentPath = currentRoute.fullPath;
-  const regex = /^\/[a-z]{2}\//; // Regex to match language prefix
+
+  // Handle root path case (e.g., /en, /ru)
+  if (currentPath.match(/^\/[a-z]{2}$/)) {
+    return navigateTo(`/${lang}`);
+  }
+
+  // Handle sub-paths (e.g., /en/services, /ru/about)
+  const regex = /^\/[a-z]{2}\//;
   const newPath = currentPath.replace(regex, `/${lang}/`);
-  navigateTo(newPath);
+  return navigateTo(newPath);
 };
 </script>
